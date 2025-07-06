@@ -1,13 +1,14 @@
 {
 	"info": {
-		"_postman_id": "260790-8a127c45-a174-4990-a1c8-283ceabdcdcd",
+		"_postman_id": "67c28750-8a72-4db6-a0cb-94b45e13c203",
 		"name": "APISIX",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "260790-67c28750-8a72-4db6-a0cb-94b45e13c203"
 	},
 	"item": [
 		{
 			"name": "Admin - Get Route",
-			"id": "260790-26e57924-34d9-430b-a592-a1114d5b2a00",
+			"id": "e07db946-eaf4-47d2-a63b-cfca2ae058fc",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -42,7 +43,7 @@
 		},
 		{
 			"name": "Mock Triton Server",
-			"id": "260790-d8a186b1-af10-46e8-9e03-8f6580c5d6de",
+			"id": "39babb4b-25b7-4477-a29d-fad25518ebb0",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
