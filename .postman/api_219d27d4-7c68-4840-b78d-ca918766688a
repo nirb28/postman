@@ -15,7 +15,7 @@ files[] = {"id":"260790-b5e784bb-8652-4c39-80ee-c3a70dec72ae","path":"RAG as a S
 [config.relations.collections.metaData]
 
 [config.relations.apiDefinition]
-files[] = {"path":"openapi.json","metaData":{}}
+files[] = {"path":"ragaas.json","metaData":{}}
 
 [config.relations.apiDefinition.metaData]
 type = openapi:3_1
