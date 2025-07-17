@@ -14,61 +14,260 @@
 					"name": "v1",
 					"item": [
 						{
-							"name": "health",
+							"name": "configurations",
 							"item": [
 								{
-									"name": "Health Check",
-									"event": [
+									"name": "{configuration_name}",
+									"item": [
 										{
-											"listen": "test",
-											"script": {
-												"id": "c432e5e1-73f8-48f9-9a39-df557ebb2ca8",
-												"exec": [
-													"pm.test(\"Response status code is 200\", function () {\r",
-													"    pm.expect(pm.response.code).to.equal(200);\r",
-													"});\r",
-													"\r",
-													"\r",
-													"pm.test(\"Response has required fields: status, version, timestamp, and services\", function () {\r",
-													"    const responseData = pm.response.json();\r",
-													"    \r",
-													"    pm.expect(responseData).to.be.an('object');\r",
-													"    pm.expect(responseData).to.have.all.keys('status', 'version', 'timestamp', 'services');\r",
-													"});\r",
-													"\r",
-													"\r",
-													"pm.test(\"Services object contains required fields\", function () {\r",
-													"    const responseData = pm.response.json();\r",
-													"    \r",
-													"    pm.expect(responseData).to.be.an('object');\r",
-													"    pm.expect(responseData.services).to.be.an('object');\r",
-													"    \r",
-													"    const requiredFields = [\"rag_service\", \"vector_store\", \"embedding\", \"generation\"];\r",
-													"    requiredFields.forEach(field => {\r",
-													"        pm.expect(responseData.services).to.have.property(field);\r",
-													"    });\r",
-													"});\r",
-													"\r",
-													"\r",
-													"pm.test(\"Response time is less than 200ms\", function () {\r",
-													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
-													"});\r",
-													"\r",
-													"\r",
-													"pm.test(\"Version is a non-empty string\", function () {\r",
-													"    const responseData = pm.response.json();\r",
-													"    \r",
-													"    pm.expect(responseData).to.be.an('object');\r",
-													"    pm.expect(responseData.version).to.exist.and.to.be.a('string').and.to.have.lengthOf.at.least(1, \"Version should not be empty\");\r",
-													"});\r",
-													""
+											"name": "Get Configuration",
+											"id": "4dfb32f8-ce66-4e75-9ee4-1c2e1b5bbf42",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
 												],
-												"type": "text/javascript",
-												"packages": {}
-											}
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/configurations/:configuration_name",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"configurations",
+														":configuration_name"
+													],
+													"variable": [
+														{
+															"key": "configuration_name",
+															"value": "batch_ml_ai_basics_test",
+															"description": "batch_ml_ai_basics_test postman_test"
+														}
+													]
+												},
+												"description": "Get a specific configuration."
+											},
+											"response": [
+												{
+													"id": "63bc1a67-800d-4e3d-9a51-25aec6ffd836",
+													"name": "Successful Response",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/configurations/:configuration_name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"configurations",
+																":configuration_name"
+															],
+															"variable": [
+																{
+																	"key": "configuration_name"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json",
+															"uuid": "d55ee458-bfab-43c3-b904-66d0197396af"
+														}
+													],
+													"cookie": [],
+													"body": "{}"
+												},
+												{
+													"id": "3c97aea7-0d5f-4b43-b801-405a118f7e23",
+													"name": "Validation Error",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/configurations/:configuration_name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"configurations",
+																":configuration_name"
+															],
+															"variable": [
+																{
+																	"key": "configuration_name"
+																}
+															]
+														}
+													},
+													"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+													"code": 422,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json",
+															"uuid": "9d0f5072-2d43-416a-944b-ad4452dfe08b"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"eu aliquip anim\",\n        \"dolor irure Excepteur ullamco\"\n      ],\n      \"msg\": \"dolor\",\n      \"type\": \"Lorem ea consequat exercitation\"\n    },\n    {\n      \"loc\": [\n        \"aute dolor in adipisicing\",\n        \"qui occaecat enim\"\n      ],\n      \"msg\": \"labo\",\n      \"type\": \"fugiat voluptate irure Duis\"\n    }\n  ]\n}"
+												}
+											]
+										},
+										{
+											"name": "Delete Configuration",
+											"id": "266b00ea-dd65-4648-8e84-a44e963d8435",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/configurations/:configuration_name",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"configurations",
+														":configuration_name"
+													],
+													"variable": [
+														{
+															"key": "configuration_name",
+															"value": "2batch_ml_ai_basics_test",
+															"description": "(Required) "
+														}
+													]
+												},
+												"description": "Delete a configuration."
+											},
+											"response": [
+												{
+													"id": "7a6fd95d-a313-4f0a-b730-509dc5986c34",
+													"name": "Successful Response",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/configurations/:configuration_name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"configurations",
+																":configuration_name"
+															],
+															"variable": [
+																{
+																	"key": "configuration_name"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"configuration_name\": \"<string>\",\n  \"config\": {\n    \"anim_7\": 99197602,\n    \"do__8\": -70632559,\n    \"cillum_99\": -37860198.65097203\n  },\n  \"message\": \"<string>\",\n  \"success\": \"<boolean>\"\n}"
+												},
+												{
+													"id": "e9c1a5c4-e804-4c3f-b239-e76d116144b2",
+													"name": "Validation Error",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/configurations/:configuration_name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"configurations",
+																":configuration_name"
+															],
+															"variable": [
+																{
+																	"key": "configuration_name"
+																}
+															]
+														}
+													},
+													"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+													"code": 422,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json",
+															"uuid": "9005a257-99c5-4bd5-b670-18d4cdb4bad0"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"eu aliquip anim\",\n        \"dolor irure Excepteur ullamco\"\n      ],\n      \"msg\": \"dolor\",\n      \"type\": \"Lorem ea consequat exercitation\"\n    },\n    {\n      \"loc\": [\n        \"aute dolor in adipisicing\",\n        \"qui occaecat enim\"\n      ],\n      \"msg\": \"labo\",\n      \"type\": \"fugiat voluptate irure Duis\"\n    }\n  ]\n}"
+												}
+											]
 										}
 									],
-									"id": "0d37f1da-9455-418c-99ed-1966edcbdb1e",
+									"id": "da6589c7-d668-4d42-864e-d42d6e97e2aa"
+								},
+								{
+									"name": "List Configurations",
+									"id": "458f87d6-4dcc-44b4-b50e-85fea20ed8b3",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -81,21 +280,28 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/api/v1/health",
+											"raw": "{{baseUrl}}/api/v1/configurations?names_only=true",
 											"host": [
 												"{{baseUrl}}"
 											],
 											"path": [
 												"api",
 												"v1",
-												"health"
+												"configurations"
+											],
+											"query": [
+												{
+													"key": "names_only",
+													"value": "true",
+													"description": "true / false"
+												}
 											]
 										},
-										"description": "Health check endpoint."
+										"description": "List all configurations and their information."
 									},
 									"response": [
 										{
-											"id": "becc36a2-ff00-424b-8ce0-426043b33145",
+											"id": "362bd415-0b1b-4600-8cce-69bb13c1afe9",
 											"name": "Successful Response",
 											"originalRequest": {
 												"method": "GET",
@@ -106,14 +312,142 @@
 													}
 												],
 												"url": {
-													"raw": "{{baseUrl}}/api/v1/health",
+													"raw": "{{baseUrl}}/api/v1/configurations",
 													"host": [
 														"{{baseUrl}}"
 													],
 													"path": [
 														"api",
 														"v1",
-														"health"
+														"configurations"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"configurations\": [\n    {\n      \"name\": \"tempor sed anim\",\n      \"document_count\": -44549620,\n      \"config\": {\n        \"dolore_8d\": \"occaecat magna et do\",\n        \"do_1af\": \"no\",\n        \"do_\": \"ut eiusmod\",\n        \"magna8_9\": 41051285\n      },\n      \"created_at\": \"2005-08-15T16:56:11.694Z\",\n      \"last_updated\": \"1980-06-10T17:10:47.682Z\",\n      \"configuration_name\": \"<string>\"\n    },\n    {\n      \"name\": \"sed laborum ut\",\n      \"document_count\": -46273467,\n      \"config\": {\n        \"magna_29\": \"et dolor\",\n        \"in6f\": true,\n        \"idf77\": true\n      },\n      \"created_at\": \"1988-12-07T19:19:03.917Z\",\n      \"last_updated\": \"2007-08-14T18:19:05.588Z\",\n      \"configuration_name\": \"<string>\"\n    }\n  ],\n  \"total_count\": 14729625\n}"
+										},
+										{
+											"id": "2899dcb2-2d56-4306-acf0-fc9512e3cfb5",
+											"name": "Validation Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/configurations",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"configurations"
+													]
+												}
+											},
+											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+											"code": 422,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"ut\",\n        \"irure aliqua\"\n      ],\n      \"msg\": \"pariatur do sunt consequat\",\n      \"type\": \"fugiat reprehenderit do Ut labore\"\n    },\n    {\n      \"loc\": [\n        \"magna Excepteur qui voluptate\",\n        \"mollit veniam eu non\"\n      ],\n      \"msg\": \"sint id\",\n      \"type\": \"nostrud laboris sit voluptate exercitation\"\n    }\n  ]\n}"
+										}
+									]
+								},
+								{
+									"name": "Add Configuration",
+									"id": "eca30732-6d5e-408c-93c4-984baee7a1ae",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"configuration_name\": \"batch_ml_ai_bm25_test\",\n    \"config\": {\n        \"chunking\": {\n            \"strategy\": \"recursive_text\",\n            \"chunk_size\": 100,\n            \"chunk_overlap\": 200,\n            \"separators\": null\n        },\n        \"vector_store\": {\n            \"type\": \"bm25\",\n            \"index_path\": \"./storage/bm25_index\",\n            \"dimension\": 384,\n            \"redis_host\": \"localhost\",\n            \"redis_port\": 6379,\n            \"redis_password\": null,\n            \"redis_index_name\": \"document-index\"\n        },\n        \"embedding\": {\n            \"model\": \"sentence-transformers/all-MiniLM-L6-v2\",\n            \"batch_size\": 32,\n            \"server_url\": \"http://zahrt.sas.upenn.edu:9001\"\n        },\n        \"generation\": {\n            \"model\": \"llama3-vllm\",\n            \"provider\": \"triton\",\n            \"temperature\": 0.7,\n            \"max_tokens\": 1024,\n            \"top_p\": 0.9,\n            \"top_k\": 5,\n            \"server_url\": \"http://zahrt.sas.upenn.edu:8000\",\n            \"system_prompt\": null\n        },\n        \"retrieval_k\": 5,\n        \"similarity_threshold\": 0.7,\n        \"reranking\": {\n            \"enabled\": true,\n            \"model\": \"cross-encoder/ms-marco-MiniLM-L6-v2\",\n            \"top_n\": 10,\n            \"score_threshold\": 0.1,\n            \"server_url\": \"http://localhost:9001\"\n        }\n    }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/configurations",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"configurations"
+											]
+										},
+										"description": "Add or update a configuration with custom settings."
+									},
+									"response": [
+										{
+											"id": "543727fc-eff0-48c7-9d60-3150d7dea0a5",
+											"name": "Successful Response",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"config\": {\n    \"ea_852\": -67619802.65858814,\n    \"dolor_7\": 8767898\n  },\n  \"configuration_name\": \"default\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/configurations",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"configurations"
 													]
 												}
 											},
@@ -124,16 +458,272 @@
 												{
 													"key": "Content-Type",
 													"value": "application/json",
-													"uuid": "53debeed-3d15-453f-a491-6d7bc2d58b33"
+													"uuid": "7cf086a2-543c-4ae5-aca8-60f7c638f930"
 												}
 											],
 											"cookie": [],
-											"body": "{\n  \"status\": \"irure deserunt sed\",\n  \"version\": \"quis\",\n  \"services\": {\n    \"elit4\": \"ex dolor\",\n    \"tempor_bb\": \"anim ea\"\n  },\n  \"timestamp\": \"2015-06-22T17:07:18.814Z\"\n}"
+											"body": "{\n  \"configuration_name\": \"ex aliquip\",\n  \"config\": {\n    \"Excepteur_8\": -51324866.10984017,\n    \"sint_51\": \"tempor enim esse et labore\"\n  },\n  \"message\": \"nisi ullamco incididunt officia cupidatat\"\n}"
+										},
+										{
+											"id": "62bd2ba5-10e6-476b-bd96-d85b2544d79f",
+											"name": "Validation Error",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"config\": {\n    \"ea_852\": -67619802.65858814,\n    \"dolor_7\": 8767898\n  },\n  \"configuration_name\": \"default\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/configurations",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"configurations"
+													]
+												}
+											},
+											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+											"code": 422,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"uuid": "9749375b-ce59-4455-8142-72474c86d7d4"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"eu aliquip anim\",\n        \"dolor irure Excepteur ullamco\"\n      ],\n      \"msg\": \"dolor\",\n      \"type\": \"Lorem ea consequat exercitation\"\n    },\n    {\n      \"loc\": [\n        \"aute dolor in adipisicing\",\n        \"qui occaecat enim\"\n      ],\n      \"msg\": \"labo\",\n      \"type\": \"fugiat voluptate irure Duis\"\n    }\n  ]\n}"
+										}
+									]
+								},
+								{
+									"name": "Reload Configurations",
+									"id": "6a923b17-a2a3-49b1-9249-4ea6d74ff215",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/configurations/reload",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"configurations",
+												"reload"
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "9d3a6698-7c31-4787-a8dc-03e483050119",
+											"name": "Successful Response",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/configurations/reload",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"configurations",
+														"reload"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{}"
+										}
+									]
+								},
+								{
+									"name": "Duplicate Configuration",
+									"id": "a8094c2f-59ed-412f-9107-b0e1a6489989",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"source_configuration_name\": \"batch_ml_ai_basics_test\",\n  \"target_configuration_name\": \"bm25_test\",\n  \"include_documents\": true\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/configurations/duplicate",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"configurations",
+												"duplicate"
+											]
+										},
+										"description": "Duplicate a configuration with option to include vector store contents.\n\nThis endpoint allows creating a copy of an existing configuration with a new name.\nOptionally, it can also copy all documents from the source configuration's vector store.\n\nArgs:\n    request: The request containing source and target configuration names and options\n    \nReturns:\n    Information about the duplicated configuration"
+									},
+									"response": [
+										{
+											"id": "d3a1d177-c796-4de5-908b-9ce874e1557d",
+											"name": "Successful Response",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"source_configuration_name\": \"<string>\",\n  \"target_configuration_name\": \"<string>\",\n  \"include_documents\": false\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/configurations/duplicate",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"configurations",
+														"duplicate"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"source_configuration_name\": \"<string>\",\n  \"target_configuration_name\": \"<string>\",\n  \"config\": {\n    \"cillum_e\": \"in\",\n    \"dolor_d_\": false\n  },\n  \"message\": \"<string>\",\n  \"documents_copied\": 0\n}"
+										},
+										{
+											"id": "87efa265-f134-416d-8252-e167c0008c32",
+											"name": "Validation Error",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"source_configuration_name\": \"<string>\",\n  \"target_configuration_name\": \"<string>\",\n  \"include_documents\": false\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/configurations/duplicate",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"configurations",
+														"duplicate"
+													]
+												}
+											},
+											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+											"code": 422,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"ut\",\n        \"irure aliqua\"\n      ],\n      \"msg\": \"pariatur do sunt consequat\",\n      \"type\": \"fugiat reprehenderit do Ut labore\"\n    },\n    {\n      \"loc\": [\n        \"magna Excepteur qui voluptate\",\n        \"mollit veniam eu non\"\n      ],\n      \"msg\": \"sint id\",\n      \"type\": \"nostrud laboris sit voluptate exercitation\"\n    }\n  ]\n}"
 										}
 									]
 								}
 							],
-							"id": "3ca910f9-41e0-4bf5-95d3-bc432f8a72dd"
+							"id": "dcf13f98-c716-4c2b-851f-036ae726c189"
 						},
 						{
 							"name": "upload",
@@ -357,7 +947,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"documents\": [\n    {\n      \"content\": \"<string>\",\n      \"filename\": \"<string>\",\n      \"metadata\": {\n        \"anim_ba\": 15861039.770733237,\n        \"irure_1_\": -3051459,\n        \"enim_6\": 96872479.159226,\n        \"dolorce\": 12402275\n      }\n    }\n  ],\n  \"configuration_name\": \"default\",\n  \"process_immediately\": true\n}",
+											"raw": "{\n  \"documents\": [\n    {\n      \"content\": \"<string>\",\n      \"metadata\": {\n        \"source\": \"Internet\"\n      }\n    }\n  ],\n  \"configuration_name\": \"default\",\n  \"process_immediately\": true\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -486,508 +1076,11 @@
 							"id": "cb7a5fb7-ac6c-405e-be45-4d2d3551e4e7"
 						},
 						{
-							"name": "query",
+							"name": "documents",
 							"item": [
 								{
-									"name": "Query Documents",
-									"id": "d45761b9-1977-429a-b820-b0507c9a0919",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/json"
-											},
-											{
-												"key": "Accept",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n  \"query\": \"What is Computer Vision?\",\n  \"configuration_name\": \"batch_ml_ai_basics_test\",\n  \"include_metadata\": true,\n  \"similarity_threshold\": 0.2,\n  \"max_sources\": 5,\n  \"max_tokens\": 200,\n  \"generate\": true,\n  \"generation_parameters\": {\n    \"temperature\": 0.2,\n    \"top_p\": 0.9,\n    \"top_k\": 40\n  },\n  \"config\": {\n    \"system_prompt\": \"\"\n  }  \n}",
-											"options": {
-												"raw": {
-													"headerFamily": "json",
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{baseUrl}}/api/v1/query",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"api",
-												"v1",
-												"query"
-											]
-										},
-										"description": "Query documents in a configuration.\n\nUses reranking if configured for the configuration."
-									},
-									"response": [
-										{
-											"id": "1d1ea8e4-053d-4348-8f27-fc180df30460",
-											"name": "Successful Response",
-											"originalRequest": {
-												"method": "POST",
-												"header": [
-													{
-														"key": "Content-Type",
-														"value": "application/json"
-													},
-													{
-														"key": "Accept",
-														"value": "application/json"
-													}
-												],
-												"body": {
-													"mode": "raw",
-													"raw": "{\n  \"query\": \"in veniam\",\n  \"configuration_name\": \"default\",\n  \"k\": 18,\n  \"similarity_threshold\": 0.20169245537319846,\n  \"include_metadata\": true,\n  \"context_items\": [\n    {\n      \"content\": \"amet ea\",\n      \"role\": \"labore dolor\",\n      \"timestamp\": \"1945-11-06T01:57:32.210Z\",\n      \"metadata\": {\n        \"velit_4\": 71502827.27607933\n      }\n    },\n    {\n      \"content\": \"et eiusmod\",\n      \"role\": \"laborum sit\",\n      \"timestamp\": \"2017-11-04T17:43:02.885Z\",\n      \"metadata\": {\n        \"laboris_f70\": false\n      }\n    }\n  ]\n}",
-													"options": {
-														"raw": {
-															"headerFamily": "json",
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{baseUrl}}/api/v1/query",
-													"host": [
-														"{{baseUrl}}"
-													],
-													"path": [
-														"api",
-														"v1",
-														"query"
-													]
-												}
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Content-Type",
-													"value": "application/json",
-													"uuid": "26e186dd-7afd-489c-8cb2-e932d90f9150"
-												}
-											],
-											"cookie": [],
-											"body": "{\n  \"query\": \"ad\",\n  \"answer\": \"esse deserunt Duis\",\n  \"sources\": [\n    {\n      \"irure135\": true,\n      \"laboris_6\": -73554120,\n      \"mollit_a\": -60020196.71186196\n    },\n    {\n      \"ind90\": -9653516.95588778,\n      \"amet8\": 10023399.996201962\n    }\n  ],\n  \"processing_time\": -44768908.67165739,\n  \"configuration_name\": \"aliqua in consectetur\"\n}"
-										},
-										{
-											"id": "4af97a15-f9a1-470d-b944-3cd77e4e4ae3",
-											"name": "Validation Error",
-											"originalRequest": {
-												"method": "POST",
-												"header": [
-													{
-														"key": "Content-Type",
-														"value": "application/json"
-													},
-													{
-														"key": "Accept",
-														"value": "application/json"
-													}
-												],
-												"body": {
-													"mode": "raw",
-													"raw": "{\n  \"query\": \"in veniam\",\n  \"configuration_name\": \"default\",\n  \"k\": 18,\n  \"similarity_threshold\": 0.20169245537319846,\n  \"include_metadata\": true,\n  \"context_items\": [\n    {\n      \"content\": \"amet ea\",\n      \"role\": \"labore dolor\",\n      \"timestamp\": \"1945-11-06T01:57:32.210Z\",\n      \"metadata\": {\n        \"velit_4\": 71502827.27607933\n      }\n    },\n    {\n      \"content\": \"et eiusmod\",\n      \"role\": \"laborum sit\",\n      \"timestamp\": \"2017-11-04T17:43:02.885Z\",\n      \"metadata\": {\n        \"laboris_f70\": false\n      }\n    }\n  ]\n}",
-													"options": {
-														"raw": {
-															"headerFamily": "json",
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{baseUrl}}/api/v1/query",
-													"host": [
-														"{{baseUrl}}"
-													],
-													"path": [
-														"api",
-														"v1",
-														"query"
-													]
-												}
-											},
-											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
-											"code": 422,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Content-Type",
-													"value": "application/json",
-													"uuid": "743f0a94-fb38-46f2-ba27-16cfa3bc986d"
-												}
-											],
-											"cookie": [],
-											"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"eu aliquip anim\",\n        \"dolor irure Excepteur ullamco\"\n      ],\n      \"msg\": \"dolor\",\n      \"type\": \"Lorem ea consequat exercitation\"\n    },\n    {\n      \"loc\": [\n        \"aute dolor in adipisicing\",\n        \"qui occaecat enim\"\n      ],\n      \"msg\": \"labo\",\n      \"type\": \"fugiat voluptate irure Duis\"\n    }\n  ]\n}"
-										},
-										{
-											"id": "77ec6cad-b86d-43b8-8803-cbce2e043e15",
-											"name": "Query w/ Override",
-											"originalRequest": {
-												"method": "POST",
-												"header": [
-													{
-														"key": "Content-Type",
-														"value": "application/json"
-													},
-													{
-														"key": "Accept",
-														"value": "application/json"
-													}
-												],
-												"body": {
-													"mode": "raw",
-													"raw": "{\n  \"query\": \"What should SPD include?\",\n  \"configuration_name\": \"postman_test\",\n  \"include_metadata\": true,\n  \"similarity_threshold\": 0.4,\n  \"max_sources\": 5,\n  \"generate\": true,\n  \"generation_parameters\": {\n    \"temperature\": 0.2,\n    \"top_p\": 0.9,\n    \"top_k\": 40\n  },\n  \"config\": {\n        \"embedding\": {\n            \"model\": \"sentence-transformers/all-MiniLM-L6-v2\",\n            \"batch_size\": 32,\n            \"server_url\": \"http://zahrt.sas.upenn.edu:9001\"\n        },\n        \"generation\": {\n            \"model\": \"llama3-8b-8192\",\n            \"provider\": \"groq\",\n            \"temperature\": 0.7,\n            \"max_tokens\": 1024,\n            \"top_p\": 0.9,\n            \"top_k\": 5,\n            \"server_url\": \"http://zahrt.sas.upenn.edu:8000\"\n        }\n  }  \n}",
-													"options": {
-														"raw": {
-															"headerFamily": "json",
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{baseUrl}}/api/v1/query",
-													"host": [
-														"{{baseUrl}}"
-													],
-													"path": [
-														"api",
-														"v1",
-														"query"
-													]
-												}
-											},
-											"_postman_previewlanguage": "Text",
-											"header": [
-												{
-													"key": "Content-Type",
-													"value": "application/json",
-													"disabled": false,
-													"enabled": true
-												}
-											],
-											"cookie": [],
-											"body": "{\n  \"query\": \"<string>\",\n  \"answer\": \"<string>\",\n  \"sources\": [\n    {\n      \"voluptatea\": false,\n      \"ad_bc2\": false,\n      \"fugiate75\": \"nostrud velit\",\n      \"Loremfb_\": 65504937,\n      \"aliquip81d\": \"incididunt commodo amet\"\n    },\n    {\n      \"amet4_\": 60251067.27614066\n    }\n  ],\n  \"processing_time\": \"<number>\",\n  \"configuration_name\": \"<string>\"\n}"
-										},
-										{
-											"id": "3fda4b99-b009-40d0-9dab-234f0d138359",
-											"name": "Query Documents",
-											"originalRequest": {
-												"method": "POST",
-												"header": [
-													{
-														"key": "Content-Type",
-														"value": "application/json"
-													},
-													{
-														"key": "Accept",
-														"value": "application/json"
-													}
-												],
-												"body": {
-													"mode": "raw",
-													"raw": "{\n  \"query\": \"What is Computer Vision?\",\n  \"configuration_name\": \"batch_ml_ai_basics_test\",\n  \"include_metadata\": true,\n  \"similarity_threshold\": 0.2,\n  \"max_sources\": 5,\n  \"max_tokens\": 200,\n  \"generate\": true,\n  \"generation_parameters\": {\n    \"temperature\": 0.2,\n    \"top_p\": 0.9,\n    \"top_k\": 40\n  },\n  \"config\": {\n    \"system_prompt\": \"\"\n  }  \n}",
-													"options": {
-														"raw": {
-															"headerFamily": "json",
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{baseUrl}}/api/v1/query",
-													"host": [
-														"{{baseUrl}}"
-													],
-													"path": [
-														"api",
-														"v1",
-														"query"
-													]
-												}
-											},
-											"_postman_previewlanguage": "Text",
-											"header": [
-												{
-													"key": "Content-Type",
-													"value": "application/json",
-													"disabled": false,
-													"enabled": true
-												}
-											],
-											"cookie": [],
-											"body": "{\n  \"query\": \"<string>\",\n  \"answer\": \"<string>\",\n  \"sources\": [\n    {\n      \"minim__d1\": false,\n      \"irure_8e\": false\n    },\n    {\n      \"dolore_3f\": true,\n      \"sit583\": \"occaecat ut ex\"\n    }\n  ],\n  \"processing_time\": \"<number>\",\n  \"configuration_name\": \"<string>\"\n}"
-										}
-									]
-								}
-							],
-							"id": "07e210a3-7d2d-4aa0-b794-27b73d609852"
-						},
-						{
-							"name": "configurations",
-							"item": [
-								{
-									"name": "{configuration_name}",
-									"item": [
-										{
-											"name": "Get Configuration",
-											"id": "4dfb32f8-ce66-4e75-9ee4-1c2e1b5bbf42",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"method": "GET",
-												"header": [
-													{
-														"key": "Accept",
-														"value": "application/json"
-													}
-												],
-												"url": {
-													"raw": "{{baseUrl}}/api/v1/configurations/:configuration_name",
-													"host": [
-														"{{baseUrl}}"
-													],
-													"path": [
-														"api",
-														"v1",
-														"configurations",
-														":configuration_name"
-													],
-													"variable": [
-														{
-															"key": "configuration_name",
-															"value": "batch_ml_ai_basics_test",
-															"description": "batch_ml_ai_basics_test postman_test"
-														}
-													]
-												},
-												"description": "Get a specific configuration."
-											},
-											"response": [
-												{
-													"id": "63bc1a67-800d-4e3d-9a51-25aec6ffd836",
-													"name": "Successful Response",
-													"originalRequest": {
-														"method": "GET",
-														"header": [
-															{
-																"key": "Accept",
-																"value": "application/json"
-															}
-														],
-														"url": {
-															"raw": "{{baseUrl}}/api/v1/configurations/:configuration_name",
-															"host": [
-																"{{baseUrl}}"
-															],
-															"path": [
-																"api",
-																"v1",
-																"configurations",
-																":configuration_name"
-															],
-															"variable": [
-																{
-																	"key": "configuration_name"
-																}
-															]
-														}
-													},
-													"status": "OK",
-													"code": 200,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Content-Type",
-															"value": "application/json",
-															"uuid": "d55ee458-bfab-43c3-b904-66d0197396af"
-														}
-													],
-													"cookie": [],
-													"body": "{}"
-												},
-												{
-													"id": "3c97aea7-0d5f-4b43-b801-405a118f7e23",
-													"name": "Validation Error",
-													"originalRequest": {
-														"method": "GET",
-														"header": [
-															{
-																"key": "Accept",
-																"value": "application/json"
-															}
-														],
-														"url": {
-															"raw": "{{baseUrl}}/api/v1/configurations/:configuration_name",
-															"host": [
-																"{{baseUrl}}"
-															],
-															"path": [
-																"api",
-																"v1",
-																"configurations",
-																":configuration_name"
-															],
-															"variable": [
-																{
-																	"key": "configuration_name"
-																}
-															]
-														}
-													},
-													"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
-													"code": 422,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Content-Type",
-															"value": "application/json",
-															"uuid": "9d0f5072-2d43-416a-944b-ad4452dfe08b"
-														}
-													],
-													"cookie": [],
-													"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"eu aliquip anim\",\n        \"dolor irure Excepteur ullamco\"\n      ],\n      \"msg\": \"dolor\",\n      \"type\": \"Lorem ea consequat exercitation\"\n    },\n    {\n      \"loc\": [\n        \"aute dolor in adipisicing\",\n        \"qui occaecat enim\"\n      ],\n      \"msg\": \"labo\",\n      \"type\": \"fugiat voluptate irure Duis\"\n    }\n  ]\n}"
-												}
-											]
-										},
-										{
-											"name": "Delete Configuration",
-											"id": "266b00ea-dd65-4648-8e84-a44e963d8435",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"method": "DELETE",
-												"header": [
-													{
-														"key": "Accept",
-														"value": "application/json"
-													}
-												],
-												"url": {
-													"raw": "{{baseUrl}}/api/v1/configurations/:configuration_name",
-													"host": [
-														"{{baseUrl}}"
-													],
-													"path": [
-														"api",
-														"v1",
-														"configurations",
-														":configuration_name"
-													],
-													"variable": [
-														{
-															"key": "configuration_name",
-															"value": "batch_ml_ai_basics_test",
-															"description": "(Required) "
-														}
-													]
-												},
-												"description": "Delete a configuration."
-											},
-											"response": [
-												{
-													"id": "7a6fd95d-a313-4f0a-b730-509dc5986c34",
-													"name": "Successful Response",
-													"originalRequest": {
-														"method": "DELETE",
-														"header": [
-															{
-																"key": "Accept",
-																"value": "application/json"
-															}
-														],
-														"url": {
-															"raw": "{{baseUrl}}/api/v1/configurations/:configuration_name",
-															"host": [
-																"{{baseUrl}}"
-															],
-															"path": [
-																"api",
-																"v1",
-																"configurations",
-																":configuration_name"
-															],
-															"variable": [
-																{
-																	"key": "configuration_name"
-																}
-															]
-														}
-													},
-													"status": "OK",
-													"code": 200,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Content-Type",
-															"value": "application/json"
-														}
-													],
-													"cookie": [],
-													"body": "{\n  \"configuration_name\": \"<string>\",\n  \"config\": {\n    \"anim_7\": 99197602,\n    \"do__8\": -70632559,\n    \"cillum_99\": -37860198.65097203\n  },\n  \"message\": \"<string>\"\n}"
-												},
-												{
-													"id": "e9c1a5c4-e804-4c3f-b239-e76d116144b2",
-													"name": "Validation Error",
-													"originalRequest": {
-														"method": "DELETE",
-														"header": [
-															{
-																"key": "Accept",
-																"value": "application/json"
-															}
-														],
-														"url": {
-															"raw": "{{baseUrl}}/api/v1/configurations/:configuration_name",
-															"host": [
-																"{{baseUrl}}"
-															],
-															"path": [
-																"api",
-																"v1",
-																"configurations",
-																":configuration_name"
-															],
-															"variable": [
-																{
-																	"key": "configuration_name"
-																}
-															]
-														}
-													},
-													"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
-													"code": 422,
-													"_postman_previewlanguage": "json",
-													"header": [
-														{
-															"key": "Content-Type",
-															"value": "application/json",
-															"uuid": "9005a257-99c5-4bd5-b670-18d4cdb4bad0"
-														}
-													],
-													"cookie": [],
-													"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"eu aliquip anim\",\n        \"dolor irure Excepteur ullamco\"\n      ],\n      \"msg\": \"dolor\",\n      \"type\": \"Lorem ea consequat exercitation\"\n    },\n    {\n      \"loc\": [\n        \"aute dolor in adipisicing\",\n        \"qui occaecat enim\"\n      ],\n      \"msg\": \"labo\",\n      \"type\": \"fugiat voluptate irure Duis\"\n    }\n  ]\n}"
-												}
-											]
-										}
-									],
-									"id": "da6589c7-d668-4d42-864e-d42d6e97e2aa"
-								},
-								{
-									"name": "List Configurations",
-									"id": "458f87d6-4dcc-44b4-b50e-85fea20ed8b3",
+									"name": "List Documents",
+									"id": "b843e2f6-c7ea-4f0c-83d3-92c7cf31c526",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
@@ -1000,28 +1093,28 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/api/v1/configurations?names_only=true",
+											"raw": "{{baseUrl}}/api/v1/documents?configuration_name=batch_ml_ai_bm25_test",
 											"host": [
 												"{{baseUrl}}"
 											],
 											"path": [
 												"api",
 												"v1",
-												"configurations"
+												"documents"
 											],
 											"query": [
 												{
-													"key": "names_only",
-													"value": "true",
-													"description": "true / false"
+													"key": "configuration_name",
+													"value": "batch_ml_ai_bm25_test",
+													"description": "batch_rl-docs_test batch_ml_ai_basics_test batch_ml_ai_bm25_test"
 												}
 											]
 										},
-										"description": "List all configurations and their information."
+										"description": "List all unique documents in a configuration.\n\nArgs:\n    configuration_name: The configuration to list documents from\n    \nReturns:\n    List of unique document IDs and their metadata"
 									},
 									"response": [
 										{
-											"id": "362bd415-0b1b-4600-8cce-69bb13c1afe9",
+											"id": "f8e6d762-1fb2-4863-aeb6-24f61a5d041e",
 											"name": "Successful Response",
 											"originalRequest": {
 												"method": "GET",
@@ -1032,255 +1125,21 @@
 													}
 												],
 												"url": {
-													"raw": "{{baseUrl}}/api/v1/configurations",
+													"raw": "{{baseUrl}}/api/v1/documents?configuration_name=<string>",
 													"host": [
 														"{{baseUrl}}"
 													],
 													"path": [
 														"api",
 														"v1",
-														"configurations"
-													]
-												}
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Content-Type",
-													"value": "application/json",
-													"uuid": "75e3f55a-942c-467a-87fa-e2f173beb7ce"
-												}
-											],
-											"cookie": [],
-											"body": "{\n  \"configurations\": [\n    {\n      \"name\": \"tempor sed anim\",\n      \"document_count\": -44549620,\n      \"config\": {\n        \"dolore_8d\": \"occaecat magna et do\",\n        \"do_1af\": \"no\",\n        \"do_\": \"ut eiusmod\",\n        \"magna8_9\": 41051285\n      },\n      \"created_at\": \"2005-08-15T16:56:11.694Z\",\n      \"last_updated\": \"1980-06-10T17:10:47.682Z\"\n    },\n    {\n      \"name\": \"sed laborum ut\",\n      \"document_count\": -46273467,\n      \"config\": {\n        \"magna_29\": \"et dolor\",\n        \"in6f\": true,\n        \"idf77\": true\n      },\n      \"created_at\": \"1988-12-07T19:19:03.917Z\",\n      \"last_updated\": \"2007-08-14T18:19:05.588Z\"\n    }\n  ],\n  \"total_count\": 14729625\n}"
-										},
-										{
-											"id": "2899dcb2-2d56-4306-acf0-fc9512e3cfb5",
-											"name": "Validation Error",
-											"originalRequest": {
-												"method": "GET",
-												"header": [
-													{
-														"key": "Accept",
-														"value": "application/json"
-													}
-												],
-												"url": {
-													"raw": "{{baseUrl}}/api/v1/configurations",
-													"host": [
-														"{{baseUrl}}"
+														"documents"
 													],
-													"path": [
-														"api",
-														"v1",
-														"configurations"
-													]
-												}
-											},
-											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
-											"code": 422,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												}
-											],
-											"cookie": [],
-											"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"ut\",\n        \"irure aliqua\"\n      ],\n      \"msg\": \"pariatur do sunt consequat\",\n      \"type\": \"fugiat reprehenderit do Ut labore\"\n    },\n    {\n      \"loc\": [\n        \"magna Excepteur qui voluptate\",\n        \"mollit veniam eu non\"\n      ],\n      \"msg\": \"sint id\",\n      \"type\": \"nostrud laboris sit voluptate exercitation\"\n    }\n  ]\n}"
-										}
-									]
-								},
-								{
-									"name": "Add Configuration",
-									"id": "eca30732-6d5e-408c-93c4-984baee7a1ae",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/json"
-											},
-											{
-												"key": "Accept",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"configuration_name\": \"batch_ml_ai_bm25_test\",\n    \"config\": {\n    \"configuration_name\": \"batch_ml_ai_bm25_test\",\n    \"chunking\": {\n      \"strategy\": \"recursive_text\",\n      \"chunk_size\": 1000,\n      \"chunk_overlap\": 200,\n      \"separators\": null\n    },\n    \"vector_store\": {\n      \"type\": \"bm25\",\n      \"index_path\": \"./storage/bm25_index\"\n    },\n    \"embedding\": {\n      \"model\": \"sentence-transformers/all-MiniLM-L6-v2\",\n      \"batch_size\": 32,\n      \"server_url\": \"http://zahrt.sas.upenn.edu:9001\"\n    },\n    \"generation\": {\n      \"model\": \"llama3-vllm\",\n      \"provider\": \"triton\",\n      \"temperature\": 0.7,\n      \"max_tokens\": 1024,\n      \"top_p\": 0.9,\n      \"top_k\": 5,\n      \"server_url\": \"http://zahrt.sas.upenn.edu:8000\",\n      \"system_prompt\": null\n    },\n    \"retrieval_k\": 5,\n    \"similarity_threshold\": 0.7,\n    \"reranking\": {\n      \"enabled\": true,\n      \"model\": \"cross-encoder/ms-marco-MiniLM-L6-v2\",\n      \"top_n\": 10,\n      \"score_threshold\": 0.1,\n      \"server_url\": \"http://localhost:9001\",\n      \"model_name\": null\n    }\n  }\n}",
-											"options": {
-												"raw": {
-													"headerFamily": "json",
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{baseUrl}}/api/v1/configurations",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"api",
-												"v1",
-												"configurations"
-											]
-										},
-										"description": "Add or update a configuration with custom settings."
-									},
-									"response": [
-										{
-											"id": "543727fc-eff0-48c7-9d60-3150d7dea0a5",
-											"name": "Successful Response",
-											"originalRequest": {
-												"method": "POST",
-												"header": [
-													{
-														"key": "Content-Type",
-														"value": "application/json"
-													},
-													{
-														"key": "Accept",
-														"value": "application/json"
-													}
-												],
-												"body": {
-													"mode": "raw",
-													"raw": "{\n  \"config\": {\n    \"ea_852\": -67619802.65858814,\n    \"dolor_7\": 8767898\n  },\n  \"configuration_name\": \"default\"\n}",
-													"options": {
-														"raw": {
-															"headerFamily": "json",
-															"language": "json"
+													"query": [
+														{
+															"description": "(Required) ",
+															"key": "configuration_name",
+															"value": "<string>"
 														}
-													}
-												},
-												"url": {
-													"raw": "{{baseUrl}}/api/v1/configurations",
-													"host": [
-														"{{baseUrl}}"
-													],
-													"path": [
-														"api",
-														"v1",
-														"configurations"
-													]
-												}
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Content-Type",
-													"value": "application/json",
-													"uuid": "7cf086a2-543c-4ae5-aca8-60f7c638f930"
-												}
-											],
-											"cookie": [],
-											"body": "{\n  \"configuration_name\": \"ex aliquip\",\n  \"config\": {\n    \"Excepteur_8\": -51324866.10984017,\n    \"sint_51\": \"tempor enim esse et labore\"\n  },\n  \"message\": \"nisi ullamco incididunt officia cupidatat\"\n}"
-										},
-										{
-											"id": "62bd2ba5-10e6-476b-bd96-d85b2544d79f",
-											"name": "Validation Error",
-											"originalRequest": {
-												"method": "POST",
-												"header": [
-													{
-														"key": "Content-Type",
-														"value": "application/json"
-													},
-													{
-														"key": "Accept",
-														"value": "application/json"
-													}
-												],
-												"body": {
-													"mode": "raw",
-													"raw": "{\n  \"config\": {\n    \"ea_852\": -67619802.65858814,\n    \"dolor_7\": 8767898\n  },\n  \"configuration_name\": \"default\"\n}",
-													"options": {
-														"raw": {
-															"headerFamily": "json",
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{baseUrl}}/api/v1/configurations",
-													"host": [
-														"{{baseUrl}}"
-													],
-													"path": [
-														"api",
-														"v1",
-														"configurations"
-													]
-												}
-											},
-											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
-											"code": 422,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Content-Type",
-													"value": "application/json",
-													"uuid": "9749375b-ce59-4455-8142-72474c86d7d4"
-												}
-											],
-											"cookie": [],
-											"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"eu aliquip anim\",\n        \"dolor irure Excepteur ullamco\"\n      ],\n      \"msg\": \"dolor\",\n      \"type\": \"Lorem ea consequat exercitation\"\n    },\n    {\n      \"loc\": [\n        \"aute dolor in adipisicing\",\n        \"qui occaecat enim\"\n      ],\n      \"msg\": \"labo\",\n      \"type\": \"fugiat voluptate irure Duis\"\n    }\n  ]\n}"
-										}
-									]
-								},
-								{
-									"name": "Reload Configurations",
-									"id": "6a923b17-a2a3-49b1-9249-4ea6d74ff215",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "POST",
-										"header": [],
-										"url": {
-											"raw": "{{baseUrl}}/api/v1/configurations/reload",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"api",
-												"v1",
-												"configurations",
-												"reload"
-											]
-										}
-									},
-									"response": [
-										{
-											"id": "9d3a6698-7c31-4787-a8dc-03e483050119",
-											"name": "Successful Response",
-											"originalRequest": {
-												"method": "POST",
-												"header": [
-													{
-														"key": "Accept",
-														"value": "application/json"
-													}
-												],
-												"url": {
-													"raw": "{{baseUrl}}/api/v1/configurations/reload",
-													"host": [
-														"{{baseUrl}}"
-													],
-													"path": [
-														"api",
-														"v1",
-														"configurations",
-														"reload"
 													]
 												}
 											},
@@ -1295,137 +1154,34 @@
 											],
 											"cookie": [],
 											"body": "{}"
-										}
-									]
-								},
-								{
-									"name": "Duplicate Configuration",
-									"id": "a8094c2f-59ed-412f-9107-b0e1a6489989",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/json"
-											},
-											{
-												"key": "Accept",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n  \"source_configuration_name\": \"<string>\",\n  \"target_configuration_name\": \"<string>\",\n  \"include_documents\": false\n}",
-											"options": {
-												"raw": {
-													"headerFamily": "json",
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{baseUrl}}/api/v1/configurations/duplicate",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"api",
-												"v1",
-												"configurations",
-												"duplicate"
-											]
-										},
-										"description": "Duplicate a configuration with option to include vector store contents.\n\nThis endpoint allows creating a copy of an existing configuration with a new name.\nOptionally, it can also copy all documents from the source configuration's vector store.\n\nArgs:\n    request: The request containing source and target configuration names and options\n    \nReturns:\n    Information about the duplicated configuration"
-									},
-									"response": [
-										{
-											"id": "d3a1d177-c796-4de5-908b-9ce874e1557d",
-											"name": "Successful Response",
-											"originalRequest": {
-												"method": "POST",
-												"header": [
-													{
-														"key": "Content-Type",
-														"value": "application/json"
-													},
-													{
-														"key": "Accept",
-														"value": "application/json"
-													}
-												],
-												"body": {
-													"mode": "raw",
-													"raw": "{\n  \"source_configuration_name\": \"<string>\",\n  \"target_configuration_name\": \"<string>\",\n  \"include_documents\": false\n}",
-													"options": {
-														"raw": {
-															"headerFamily": "json",
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{baseUrl}}/api/v1/configurations/duplicate",
-													"host": [
-														"{{baseUrl}}"
-													],
-													"path": [
-														"api",
-														"v1",
-														"configurations",
-														"duplicate"
-													]
-												}
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												}
-											],
-											"cookie": [],
-											"body": "{\n  \"source_configuration_name\": \"<string>\",\n  \"target_configuration_name\": \"<string>\",\n  \"config\": {\n    \"cillum_e\": \"in\",\n    \"dolor_d_\": false\n  },\n  \"message\": \"<string>\",\n  \"documents_copied\": 0\n}"
 										},
 										{
-											"id": "87efa265-f134-416d-8252-e167c0008c32",
+											"id": "a804de61-b6f9-4e1a-8c86-fd3c6eeaf67a",
 											"name": "Validation Error",
 											"originalRequest": {
-												"method": "POST",
+												"method": "GET",
 												"header": [
-													{
-														"key": "Content-Type",
-														"value": "application/json"
-													},
 													{
 														"key": "Accept",
 														"value": "application/json"
 													}
 												],
-												"body": {
-													"mode": "raw",
-													"raw": "{\n  \"source_configuration_name\": \"<string>\",\n  \"target_configuration_name\": \"<string>\",\n  \"include_documents\": false\n}",
-													"options": {
-														"raw": {
-															"headerFamily": "json",
-															"language": "json"
-														}
-													}
-												},
 												"url": {
-													"raw": "{{baseUrl}}/api/v1/configurations/duplicate",
+													"raw": "{{baseUrl}}/api/v1/documents?configuration_name=<string>",
 													"host": [
 														"{{baseUrl}}"
 													],
 													"path": [
 														"api",
 														"v1",
-														"configurations",
-														"duplicate"
+														"documents"
+													],
+													"query": [
+														{
+															"description": "(Required) ",
+															"key": "configuration_name",
+															"value": "<string>"
+														}
 													]
 												}
 											},
@@ -1439,26 +1195,62 @@
 												}
 											],
 											"cookie": [],
-											"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"ut\",\n        \"irure aliqua\"\n      ],\n      \"msg\": \"pariatur do sunt consequat\",\n      \"type\": \"fugiat reprehenderit do Ut labore\"\n    },\n    {\n      \"loc\": [\n        \"magna Excepteur qui voluptate\",\n        \"mollit veniam eu non\"\n      ],\n      \"msg\": \"sint id\",\n      \"type\": \"nostrud laboris sit voluptate exercitation\"\n    }\n  ]\n}"
+											"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        -60817488,\n        15768842\n      ],\n      \"msg\": \"laboris anim ullamco ex\",\n      \"type\": \"voluptate qui non\"\n    },\n    {\n      \"loc\": [\n        \"veniam\",\n        \"proident labore ullamco laboris nulla\"\n      ],\n      \"msg\": \"non\",\n      \"type\": \"ea irure\"\n    }\n  ]\n}"
 										}
 									]
-								}
-							],
-							"id": "dcf13f98-c716-4c2b-851f-036ae726c189"
-						},
-						{
-							"name": "debug",
-							"item": [
+								},
 								{
-									"name": "{configuration_name}",
-									"item": [
+									"name": "Get Document Chunks",
+									"id": "8807aa34-0a89-400a-ac5c-2d7c12e5b293",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/documents/:document_id/chunks?configuration_name=batch_ml_ai_bm25_test&include_vectors=false",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"documents",
+												":document_id",
+												"chunks"
+											],
+											"query": [
+												{
+													"key": "configuration_name",
+													"value": "batch_ml_ai_bm25_test",
+													"description": "batch_ml_ai_bm25_test batch_ml_ai_basics_test"
+												},
+												{
+													"key": "include_vectors",
+													"value": "false"
+												}
+											],
+											"variable": [
+												{
+													"key": "document_id",
+													"value": "46ab5b2c-662c-4267-ad52-c8d4b8266776",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Retrieve all chunks of a specific document.\n\nArgs:\n    document_id: The ID of the document to retrieve chunks for\n    configuration_name: The configuration where the document is stored\n    \nReturns:\n    Dictionary containing all chunks of the document"
+									},
+									"response": [
 										{
-											"name": "Debug Configuration",
-											"id": "bd0f2b9b-fd53-43c7-9eda-bc48365cc929",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
+											"id": "7d6d6a72-e229-4fb6-abdb-e2389b729ce5",
+											"name": "Successful Response",
+											"originalRequest": {
 												"method": "GET",
 												"header": [
 													{
@@ -1467,152 +1259,373 @@
 													}
 												],
 												"url": {
-													"raw": "{{baseUrl}}/api/v1/debug/:configuration_name?limit=20&show_vectors=false&show_text=false",
+													"raw": "{{baseUrl}}/api/v1/documents/:document_id/chunks?configuration_name=<string>",
 													"host": [
 														"{{baseUrl}}"
 													],
 													"path": [
 														"api",
 														"v1",
-														"debug",
-														":configuration_name"
+														"documents",
+														":document_id",
+														"chunks"
 													],
 													"query": [
 														{
-															"key": "limit",
-															"value": "20"
-														},
-														{
-															"key": "show_vectors",
-															"value": "false"
-														},
-														{
-															"key": "show_text",
-															"value": "false"
+															"description": "(Required) ",
+															"key": "configuration_name",
+															"value": "<string>"
 														}
 													],
 													"variable": [
 														{
-															"key": "configuration_name",
-															"value": "batch_ml_ai_basics_test",
-															"description": "(Required) "
+															"key": "document_id"
 														}
 													]
-												},
-												"description": "Debug endpoint to inspect the vectors and chunks in a configuration.\n\nArgs:\n    configuration_name: Name of the configuration to inspect\n    limit: Maximum number of chunks to return\n    show_vectors: Whether to include embedding vectors in the response\n    \nReturns:\n    Dictionary containing chunks and their metadata from the configuration"
+												}
 											},
-											"response": [
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
 												{
-													"id": "73369833-f50f-415d-8834-7288495e86ba",
-													"name": "Successful Response",
-													"originalRequest": {
-														"method": "GET",
-														"header": [
-															{
-																"key": "Accept",
-																"value": "application/json"
-															}
-														],
-														"url": {
-															"raw": "{{baseUrl}}/api/v1/debug/:configuration_name?limit=10&show_vectors=false",
-															"host": [
-																"{{baseUrl}}"
-															],
-															"path": [
-																"api",
-																"v1",
-																"debug",
-																":configuration_name"
-															],
-															"query": [
-																{
-																	"key": "limit",
-																	"value": "10"
-																},
-																{
-																	"key": "show_vectors",
-																	"value": "false"
-																}
-															],
-															"variable": [
-																{
-																	"key": "configuration_name"
-																}
-															]
-														}
-													},
-													"status": "OK",
-													"code": 200,
-													"_postman_previewlanguage": "json",
-													"header": [
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{}"
+										},
+										{
+											"id": "14a87d90-f805-42c9-84c2-9fe6f8168c79",
+											"name": "Validation Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/documents/:document_id/chunks?configuration_name=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"documents",
+														":document_id",
+														"chunks"
+													],
+													"query": [
 														{
-															"key": "Content-Type",
-															"value": "application/json",
-															"uuid": "2e51d31f-0520-44d2-848e-0db05689b345"
+															"description": "(Required) ",
+															"key": "configuration_name",
+															"value": "<string>"
 														}
 													],
-													"cookie": [],
-													"body": "{}"
-												},
-												{
-													"id": "f64602b8-c578-4ba7-ae58-0a06f9c7827f",
-													"name": "Validation Error",
-													"originalRequest": {
-														"method": "GET",
-														"header": [
-															{
-																"key": "Accept",
-																"value": "application/json"
-															}
-														],
-														"url": {
-															"raw": "{{baseUrl}}/api/v1/debug/:configuration_name?limit=10&show_vectors=false",
-															"host": [
-																"{{baseUrl}}"
-															],
-															"path": [
-																"api",
-																"v1",
-																"debug",
-																":configuration_name"
-															],
-															"query": [
-																{
-																	"key": "limit",
-																	"value": "10"
-																},
-																{
-																	"key": "show_vectors",
-																	"value": "false"
-																}
-															],
-															"variable": [
-																{
-																	"key": "configuration_name"
-																}
-															]
-														}
-													},
-													"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
-													"code": 422,
-													"_postman_previewlanguage": "json",
-													"header": [
+													"variable": [
 														{
-															"key": "Content-Type",
-															"value": "application/json",
-															"uuid": "a45bbaa2-b352-4424-afd7-ad920f50412c"
+															"key": "document_id"
 														}
-													],
-													"cookie": [],
-													"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"eu aliquip anim\",\n        \"dolor irure Excepteur ullamco\"\n      ],\n      \"msg\": \"dolor\",\n      \"type\": \"Lorem ea consequat exercitation\"\n    },\n    {\n      \"loc\": [\n        \"aute dolor in adipisicing\",\n        \"qui occaecat enim\"\n      ],\n      \"msg\": \"labo\",\n      \"type\": \"fugiat voluptate irure Duis\"\n    }\n  ]\n}"
+													]
+												}
+											},
+											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+											"code": 422,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        68566594,\n        \"sunt tempor cupidatat cillum\"\n      ],\n      \"msg\": \"quis et commodo officia\",\n      \"type\": \"aliqua elit\"\n    },\n    {\n      \"loc\": [\n        \"Ut\",\n        \"dolore ipsum Duis labore pariatur\"\n      ],\n      \"msg\": \"sint elit esse commodo\",\n      \"type\": \"aliquip eiusmod\"\n    }\n  ]\n}"
+										}
+									]
+								},
+								{
+									"name": "Delete Document Chunks",
+									"id": "beca27a5-a88f-4cbc-9869-3dafd73fe886",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/documents/:document_id/chunks?configuration_name=batch_ml_ai_basics_test",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"documents",
+												":document_id",
+												"chunks"
+											],
+											"query": [
+												{
+													"key": "configuration_name",
+													"value": "batch_ml_ai_basics_test",
+													"description": "(Required) "
+												}
+											],
+											"variable": [
+												{
+													"key": "document_id",
+													"value": "be0d2c77-ec9d-4729-9856-97b40b561961",
+													"description": "(Required) "
 												}
 											]
+										},
+										"description": "Delete all chunks of a specific document.\n\nArgs:\n    document_id: The ID of the document to delete chunks for\n    configuration_name: The configuration where the document is stored\n    \nReturns:\n    Dictionary with deletion results"
+									},
+									"response": [
+										{
+											"id": "24d19d9e-4a61-47c4-bb0d-915c8fcccbe7",
+											"name": "Successful Response",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/documents/:document_id/chunks?configuration_name=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"documents",
+														":document_id",
+														"chunks"
+													],
+													"query": [
+														{
+															"description": "(Required) ",
+															"key": "configuration_name",
+															"value": "<string>"
+														}
+													],
+													"variable": [
+														{
+															"key": "document_id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{}"
+										},
+										{
+											"id": "c2cc3eed-c79f-43a7-94ac-3dc10ac260ad",
+											"name": "Validation Error",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/documents/:document_id/chunks?configuration_name=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"documents",
+														":document_id",
+														"chunks"
+													],
+													"query": [
+														{
+															"description": "(Required) ",
+															"key": "configuration_name",
+															"value": "<string>"
+														}
+													],
+													"variable": [
+														{
+															"key": "document_id"
+														}
+													]
+												}
+											},
+											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+											"code": 422,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        68566594,\n        \"sunt tempor cupidatat cillum\"\n      ],\n      \"msg\": \"quis et commodo officia\",\n      \"type\": \"aliqua elit\"\n    },\n    {\n      \"loc\": [\n        \"Ut\",\n        \"dolore ipsum Duis labore pariatur\"\n      ],\n      \"msg\": \"sint elit esse commodo\",\n      \"type\": \"aliquip eiusmod\"\n    }\n  ]\n}"
 										}
-									],
-									"id": "76c82544-e1cf-4b68-9854-50afb1d1e7d9"
+									]
+								},
+								{
+									"name": "Delete All Documents",
+									"id": "72ff871e-4858-413c-b6ee-5b4d80de91e7",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/documents?configuration_name=bm25_test&confirm=true",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"documents"
+											],
+											"query": [
+												{
+													"key": "configuration_name",
+													"value": "bm25_test",
+													"description": "(Required) "
+												},
+												{
+													"key": "confirm",
+													"value": "true"
+												}
+											]
+										},
+										"description": "Delete all documents and their chunks from a configuration.\n\nArgs:\n    configuration_name: The configuration to delete documents from\n    confirm: Must be set to true to confirm the deletion\n    \nReturns:\n    Results of the deletion operation"
+									},
+									"response": [
+										{
+											"id": "773674c7-7ed1-466f-af41-165124f932e4",
+											"name": "Successful Response",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/documents?configuration_name=<string>&confirm=false",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"documents"
+													],
+													"query": [
+														{
+															"description": "(Required) ",
+															"key": "configuration_name",
+															"value": "<string>"
+														},
+														{
+															"key": "confirm",
+															"value": "false"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{}"
+										},
+										{
+											"id": "76f02d3b-ca8d-4a04-b8d9-7a5e1b768d86",
+											"name": "Validation Error",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/documents?configuration_name=<string>&confirm=false",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"documents"
+													],
+													"query": [
+														{
+															"description": "(Required) ",
+															"key": "configuration_name",
+															"value": "<string>"
+														},
+														{
+															"key": "confirm",
+															"value": "false"
+														}
+													]
+												}
+											},
+											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+											"code": 422,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"labore reprehenderit\",\n        \"aliqua elit\"\n      ],\n      \"msg\": \"deserunt nostrud esse\",\n      \"type\": \"consectetur amet ut\"\n    },\n    {\n      \"loc\": [\n        \"sed dolore et\",\n        \"nostrud n\"\n      ],\n      \"msg\": \"Excepteur enim pariatur\",\n      \"type\": \"deserunt sit\"\n    }\n  ]\n}"
+										}
+									]
 								}
 							],
-							"id": "87ded14d-4beb-468f-88be-46a4f533588b"
+							"id": "f64a84d5-1131-47e8-841b-8f72053f1924"
 						},
 						{
 							"name": "retrieve",
@@ -1976,487 +1989,84 @@
 							"id": "f60d4a73-cb2d-4a50-bc4c-ac8aa14d1a56"
 						},
 						{
-							"name": "documents",
+							"name": "query",
 							"item": [
 								{
-									"name": "List Documents",
-									"id": "b843e2f6-c7ea-4f0c-83d3-92c7cf31c526",
+									"name": "Query Documents",
+									"id": "d45761b9-1977-429a-b820-b0507c9a0919",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
 									"request": {
-										"method": "GET",
+										"method": "POST",
 										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
 											{
 												"key": "Accept",
 												"value": "application/json"
 											}
 										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"query\": \"What is Computer Vision?\",\n  \"configuration_name\": \"batch_ml_ai_basics_test\",\n  \"include_metadata\": true,\n  \"similarity_threshold\": 0.2,\n  \"max_sources\": 5,\n  \"max_tokens\": 200,\n  \"generate\": true,\n  \"generation_parameters\": {\n    \"temperature\": 0.2,\n    \"top_p\": 0.9,\n    \"top_k\": 40\n  },\n  \"config\": {\n    \"system_prompt\": \"\"\n  }  \n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
 										"url": {
-											"raw": "{{baseUrl}}/api/v1/documents?configuration_name=batch_ml_ai_bm25_test",
+											"raw": "{{baseUrl}}/api/v1/query",
 											"host": [
 												"{{baseUrl}}"
 											],
 											"path": [
 												"api",
 												"v1",
-												"documents"
-											],
-											"query": [
-												{
-													"key": "configuration_name",
-													"value": "batch_ml_ai_bm25_test",
-													"description": "batch_rl-docs_test batch_ml_ai_basics_test batch_ml_ai_bm25_test"
-												}
+												"query"
 											]
 										},
-										"description": "List all unique documents in a configuration.\n\nArgs:\n    configuration_name: The configuration to list documents from\n    \nReturns:\n    List of unique document IDs and their metadata"
+										"description": "Query documents in a configuration.\n\nUses reranking if configured for the configuration."
 									},
 									"response": [
 										{
-											"id": "f8e6d762-1fb2-4863-aeb6-24f61a5d041e",
+											"id": "1d1ea8e4-053d-4348-8f27-fc180df30460",
 											"name": "Successful Response",
 											"originalRequest": {
-												"method": "GET",
+												"method": "POST",
 												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
 													{
 														"key": "Accept",
 														"value": "application/json"
 													}
 												],
-												"url": {
-													"raw": "{{baseUrl}}/api/v1/documents?configuration_name=<string>",
-													"host": [
-														"{{baseUrl}}"
-													],
-													"path": [
-														"api",
-														"v1",
-														"documents"
-													],
-													"query": [
-														{
-															"description": "(Required) ",
-															"key": "configuration_name",
-															"value": "<string>"
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"query\": \"in veniam\",\n  \"configuration_name\": \"default\",\n  \"k\": 18,\n  \"similarity_threshold\": 0.20169245537319846,\n  \"include_metadata\": true,\n  \"context_items\": [\n    {\n      \"content\": \"amet ea\",\n      \"role\": \"labore dolor\",\n      \"timestamp\": \"1945-11-06T01:57:32.210Z\",\n      \"metadata\": {\n        \"velit_4\": 71502827.27607933\n      }\n    },\n    {\n      \"content\": \"et eiusmod\",\n      \"role\": \"laborum sit\",\n      \"timestamp\": \"2017-11-04T17:43:02.885Z\",\n      \"metadata\": {\n        \"laboris_f70\": false\n      }\n    }\n  ]\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
 														}
-													]
-												}
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												}
-											],
-											"cookie": [],
-											"body": "{}"
-										},
-										{
-											"id": "a804de61-b6f9-4e1a-8c86-fd3c6eeaf67a",
-											"name": "Validation Error",
-											"originalRequest": {
-												"method": "GET",
-												"header": [
-													{
-														"key": "Accept",
-														"value": "application/json"
 													}
-												],
-												"url": {
-													"raw": "{{baseUrl}}/api/v1/documents?configuration_name=<string>",
-													"host": [
-														"{{baseUrl}}"
-													],
-													"path": [
-														"api",
-														"v1",
-														"documents"
-													],
-													"query": [
-														{
-															"description": "(Required) ",
-															"key": "configuration_name",
-															"value": "<string>"
-														}
-													]
-												}
-											},
-											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
-											"code": 422,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												}
-											],
-											"cookie": [],
-											"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        -60817488,\n        15768842\n      ],\n      \"msg\": \"laboris anim ullamco ex\",\n      \"type\": \"voluptate qui non\"\n    },\n    {\n      \"loc\": [\n        \"veniam\",\n        \"proident labore ullamco laboris nulla\"\n      ],\n      \"msg\": \"non\",\n      \"type\": \"ea irure\"\n    }\n  ]\n}"
-										}
-									]
-								},
-								{
-									"name": "Get Document Chunks",
-									"id": "8807aa34-0a89-400a-ac5c-2d7c12e5b293",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json"
-											}
-										],
-										"url": {
-											"raw": "{{baseUrl}}/api/v1/documents/:document_id/chunks?configuration_name=batch_ml_ai_bm25_test",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"api",
-												"v1",
-												"documents",
-												":document_id",
-												"chunks"
-											],
-											"query": [
-												{
-													"key": "configuration_name",
-													"value": "batch_ml_ai_bm25_test",
-													"description": "batch_ml_ai_bm25_test batch_ml_ai_basics_test"
-												}
-											],
-											"variable": [
-												{
-													"key": "document_id",
-													"value": "46ab5b2c-662c-4267-ad52-c8d4b8266776",
-													"description": "(Required) "
-												}
-											]
-										},
-										"description": "Retrieve all chunks of a specific document.\n\nArgs:\n    document_id: The ID of the document to retrieve chunks for\n    configuration_name: The configuration where the document is stored\n    \nReturns:\n    Dictionary containing all chunks of the document"
-									},
-									"response": [
-										{
-											"id": "7d6d6a72-e229-4fb6-abdb-e2389b729ce5",
-											"name": "Successful Response",
-											"originalRequest": {
-												"method": "GET",
-												"header": [
-													{
-														"key": "Accept",
-														"value": "application/json"
-													}
-												],
-												"url": {
-													"raw": "{{baseUrl}}/api/v1/documents/:document_id/chunks?configuration_name=<string>",
-													"host": [
-														"{{baseUrl}}"
-													],
-													"path": [
-														"api",
-														"v1",
-														"documents",
-														":document_id",
-														"chunks"
-													],
-													"query": [
-														{
-															"description": "(Required) ",
-															"key": "configuration_name",
-															"value": "<string>"
-														}
-													],
-													"variable": [
-														{
-															"key": "document_id"
-														}
-													]
-												}
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												}
-											],
-											"cookie": [],
-											"body": "{}"
-										},
-										{
-											"id": "14a87d90-f805-42c9-84c2-9fe6f8168c79",
-											"name": "Validation Error",
-											"originalRequest": {
-												"method": "GET",
-												"header": [
-													{
-														"key": "Accept",
-														"value": "application/json"
-													}
-												],
-												"url": {
-													"raw": "{{baseUrl}}/api/v1/documents/:document_id/chunks?configuration_name=<string>",
-													"host": [
-														"{{baseUrl}}"
-													],
-													"path": [
-														"api",
-														"v1",
-														"documents",
-														":document_id",
-														"chunks"
-													],
-													"query": [
-														{
-															"description": "(Required) ",
-															"key": "configuration_name",
-															"value": "<string>"
-														}
-													],
-													"variable": [
-														{
-															"key": "document_id"
-														}
-													]
-												}
-											},
-											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
-											"code": 422,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												}
-											],
-											"cookie": [],
-											"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        68566594,\n        \"sunt tempor cupidatat cillum\"\n      ],\n      \"msg\": \"quis et commodo officia\",\n      \"type\": \"aliqua elit\"\n    },\n    {\n      \"loc\": [\n        \"Ut\",\n        \"dolore ipsum Duis labore pariatur\"\n      ],\n      \"msg\": \"sint elit esse commodo\",\n      \"type\": \"aliquip eiusmod\"\n    }\n  ]\n}"
-										}
-									]
-								},
-								{
-									"name": "Delete Document Chunks",
-									"id": "beca27a5-a88f-4cbc-9869-3dafd73fe886",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "DELETE",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json"
-											}
-										],
-										"url": {
-											"raw": "{{baseUrl}}/api/v1/documents/:document_id/chunks?configuration_name=batch_ml_ai_basics_test",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"api",
-												"v1",
-												"documents",
-												":document_id",
-												"chunks"
-											],
-											"query": [
-												{
-													"key": "configuration_name",
-													"value": "batch_ml_ai_basics_test",
-													"description": "(Required) "
-												}
-											],
-											"variable": [
-												{
-													"key": "document_id",
-													"value": "be0d2c77-ec9d-4729-9856-97b40b561961",
-													"description": "(Required) "
-												}
-											]
-										},
-										"description": "Delete all chunks of a specific document.\n\nArgs:\n    document_id: The ID of the document to delete chunks for\n    configuration_name: The configuration where the document is stored\n    \nReturns:\n    Dictionary with deletion results"
-									},
-									"response": [
-										{
-											"id": "24d19d9e-4a61-47c4-bb0d-915c8fcccbe7",
-											"name": "Successful Response",
-											"originalRequest": {
-												"method": "DELETE",
-												"header": [
-													{
-														"key": "Accept",
-														"value": "application/json"
-													}
-												],
-												"url": {
-													"raw": "{{baseUrl}}/api/v1/documents/:document_id/chunks?configuration_name=<string>",
-													"host": [
-														"{{baseUrl}}"
-													],
-													"path": [
-														"api",
-														"v1",
-														"documents",
-														":document_id",
-														"chunks"
-													],
-													"query": [
-														{
-															"description": "(Required) ",
-															"key": "configuration_name",
-															"value": "<string>"
-														}
-													],
-													"variable": [
-														{
-															"key": "document_id"
-														}
-													]
-												}
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												}
-											],
-											"cookie": [],
-											"body": "{}"
-										},
-										{
-											"id": "c2cc3eed-c79f-43a7-94ac-3dc10ac260ad",
-											"name": "Validation Error",
-											"originalRequest": {
-												"method": "DELETE",
-												"header": [
-													{
-														"key": "Accept",
-														"value": "application/json"
-													}
-												],
-												"url": {
-													"raw": "{{baseUrl}}/api/v1/documents/:document_id/chunks?configuration_name=<string>",
-													"host": [
-														"{{baseUrl}}"
-													],
-													"path": [
-														"api",
-														"v1",
-														"documents",
-														":document_id",
-														"chunks"
-													],
-													"query": [
-														{
-															"description": "(Required) ",
-															"key": "configuration_name",
-															"value": "<string>"
-														}
-													],
-													"variable": [
-														{
-															"key": "document_id"
-														}
-													]
-												}
-											},
-											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
-											"code": 422,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Content-Type",
-													"value": "application/json"
-												}
-											],
-											"cookie": [],
-											"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        68566594,\n        \"sunt tempor cupidatat cillum\"\n      ],\n      \"msg\": \"quis et commodo officia\",\n      \"type\": \"aliqua elit\"\n    },\n    {\n      \"loc\": [\n        \"Ut\",\n        \"dolore ipsum Duis labore pariatur\"\n      ],\n      \"msg\": \"sint elit esse commodo\",\n      \"type\": \"aliquip eiusmod\"\n    }\n  ]\n}"
-										}
-									]
-								},
-								{
-									"name": "Delete All Documents",
-									"id": "72ff871e-4858-413c-b6ee-5b4d80de91e7",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "DELETE",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json"
-											}
-										],
-										"url": {
-											"raw": "{{baseUrl}}/api/v1/documents?configuration_name=batch_ml_ai_basics_test&confirm=true",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"api",
-												"v1",
-												"documents"
-											],
-											"query": [
-												{
-													"key": "configuration_name",
-													"value": "batch_ml_ai_basics_test",
-													"description": "(Required) "
 												},
-												{
-													"key": "confirm",
-													"value": "true"
-												}
-											]
-										},
-										"description": "Delete all documents and their chunks from a configuration.\n\nArgs:\n    configuration_name: The configuration to delete documents from\n    confirm: Must be set to true to confirm the deletion\n    \nReturns:\n    Results of the deletion operation"
-									},
-									"response": [
-										{
-											"id": "773674c7-7ed1-466f-af41-165124f932e4",
-											"name": "Successful Response",
-											"originalRequest": {
-												"method": "DELETE",
-												"header": [
-													{
-														"key": "Accept",
-														"value": "application/json"
-													}
-												],
 												"url": {
-													"raw": "{{baseUrl}}/api/v1/documents?configuration_name=<string>&confirm=false",
+													"raw": "{{baseUrl}}/api/v1/query",
 													"host": [
 														"{{baseUrl}}"
 													],
 													"path": [
 														"api",
 														"v1",
-														"documents"
-													],
-													"query": [
-														{
-															"description": "(Required) ",
-															"key": "configuration_name",
-															"value": "<string>"
-														},
-														{
-															"key": "confirm",
-															"value": "false"
-														}
+														"query"
 													]
 												}
 											},
@@ -2466,43 +2076,47 @@
 											"header": [
 												{
 													"key": "Content-Type",
-													"value": "application/json"
+													"value": "application/json",
+													"uuid": "26e186dd-7afd-489c-8cb2-e932d90f9150"
 												}
 											],
 											"cookie": [],
-											"body": "{}"
+											"body": "{\n  \"query\": \"ad\",\n  \"answer\": \"esse deserunt Duis\",\n  \"sources\": [\n    {\n      \"irure135\": true,\n      \"laboris_6\": -73554120,\n      \"mollit_a\": -60020196.71186196\n    },\n    {\n      \"ind90\": -9653516.95588778,\n      \"amet8\": 10023399.996201962\n    }\n  ],\n  \"processing_time\": -44768908.67165739,\n  \"configuration_name\": \"aliqua in consectetur\"\n}"
 										},
 										{
-											"id": "76f02d3b-ca8d-4a04-b8d9-7a5e1b768d86",
+											"id": "4af97a15-f9a1-470d-b944-3cd77e4e4ae3",
 											"name": "Validation Error",
 											"originalRequest": {
-												"method": "DELETE",
+												"method": "POST",
 												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
 													{
 														"key": "Accept",
 														"value": "application/json"
 													}
 												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"query\": \"in veniam\",\n  \"configuration_name\": \"default\",\n  \"k\": 18,\n  \"similarity_threshold\": 0.20169245537319846,\n  \"include_metadata\": true,\n  \"context_items\": [\n    {\n      \"content\": \"amet ea\",\n      \"role\": \"labore dolor\",\n      \"timestamp\": \"1945-11-06T01:57:32.210Z\",\n      \"metadata\": {\n        \"velit_4\": 71502827.27607933\n      }\n    },\n    {\n      \"content\": \"et eiusmod\",\n      \"role\": \"laborum sit\",\n      \"timestamp\": \"2017-11-04T17:43:02.885Z\",\n      \"metadata\": {\n        \"laboris_f70\": false\n      }\n    }\n  ]\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
 												"url": {
-													"raw": "{{baseUrl}}/api/v1/documents?configuration_name=<string>&confirm=false",
+													"raw": "{{baseUrl}}/api/v1/query",
 													"host": [
 														"{{baseUrl}}"
 													],
 													"path": [
 														"api",
 														"v1",
-														"documents"
-													],
-													"query": [
-														{
-															"description": "(Required) ",
-															"key": "configuration_name",
-															"value": "<string>"
-														},
-														{
-															"key": "confirm",
-															"value": "false"
-														}
+														"query"
 													]
 												}
 											},
@@ -2512,16 +2126,283 @@
 											"header": [
 												{
 													"key": "Content-Type",
-													"value": "application/json"
+													"value": "application/json",
+													"uuid": "743f0a94-fb38-46f2-ba27-16cfa3bc986d"
 												}
 											],
 											"cookie": [],
-											"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"labore reprehenderit\",\n        \"aliqua elit\"\n      ],\n      \"msg\": \"deserunt nostrud esse\",\n      \"type\": \"consectetur amet ut\"\n    },\n    {\n      \"loc\": [\n        \"sed dolore et\",\n        \"nostrud n\"\n      ],\n      \"msg\": \"Excepteur enim pariatur\",\n      \"type\": \"deserunt sit\"\n    }\n  ]\n}"
+											"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"eu aliquip anim\",\n        \"dolor irure Excepteur ullamco\"\n      ],\n      \"msg\": \"dolor\",\n      \"type\": \"Lorem ea consequat exercitation\"\n    },\n    {\n      \"loc\": [\n        \"aute dolor in adipisicing\",\n        \"qui occaecat enim\"\n      ],\n      \"msg\": \"labo\",\n      \"type\": \"fugiat voluptate irure Duis\"\n    }\n  ]\n}"
+										},
+										{
+											"id": "77ec6cad-b86d-43b8-8803-cbce2e043e15",
+											"name": "Query w/ Override",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"query\": \"What should SPD include?\",\n  \"configuration_name\": \"postman_test\",\n  \"include_metadata\": true,\n  \"similarity_threshold\": 0.4,\n  \"max_sources\": 5,\n  \"generate\": true,\n  \"generation_parameters\": {\n    \"temperature\": 0.2,\n    \"top_p\": 0.9,\n    \"top_k\": 40\n  },\n  \"config\": {\n        \"embedding\": {\n            \"model\": \"sentence-transformers/all-MiniLM-L6-v2\",\n            \"batch_size\": 32,\n            \"server_url\": \"http://zahrt.sas.upenn.edu:9001\"\n        },\n        \"generation\": {\n            \"model\": \"llama3-8b-8192\",\n            \"provider\": \"groq\",\n            \"temperature\": 0.7,\n            \"max_tokens\": 1024,\n            \"top_p\": 0.9,\n            \"top_k\": 5,\n            \"server_url\": \"http://zahrt.sas.upenn.edu:8000\"\n        }\n  }  \n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/query",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"query"
+													]
+												}
+											},
+											"_postman_previewlanguage": "Text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"disabled": false,
+													"enabled": true
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"query\": \"<string>\",\n  \"answer\": \"<string>\",\n  \"sources\": [\n    {\n      \"voluptatea\": false,\n      \"ad_bc2\": false,\n      \"fugiate75\": \"nostrud velit\",\n      \"Loremfb_\": 65504937,\n      \"aliquip81d\": \"incididunt commodo amet\"\n    },\n    {\n      \"amet4_\": 60251067.27614066\n    }\n  ],\n  \"processing_time\": \"<number>\",\n  \"configuration_name\": \"<string>\"\n}"
+										},
+										{
+											"id": "3fda4b99-b009-40d0-9dab-234f0d138359",
+											"name": "Query Documents",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"query\": \"What is Computer Vision?\",\n  \"configuration_name\": \"batch_ml_ai_basics_test\",\n  \"include_metadata\": true,\n  \"similarity_threshold\": 0.2,\n  \"max_sources\": 5,\n  \"max_tokens\": 200,\n  \"generate\": true,\n  \"generation_parameters\": {\n    \"temperature\": 0.2,\n    \"top_p\": 0.9,\n    \"top_k\": 40\n  },\n  \"config\": {\n    \"system_prompt\": \"\"\n  }  \n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/query",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"query"
+													]
+												}
+											},
+											"_postman_previewlanguage": "Text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"disabled": false,
+													"enabled": true
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"query\": \"<string>\",\n  \"answer\": \"<string>\",\n  \"sources\": [\n    {\n      \"minim__d1\": false,\n      \"irure_8e\": false\n    },\n    {\n      \"dolore_3f\": true,\n      \"sit583\": \"occaecat ut ex\"\n    }\n  ],\n  \"processing_time\": \"<number>\",\n  \"configuration_name\": \"<string>\"\n}"
 										}
 									]
 								}
 							],
-							"id": "f64a84d5-1131-47e8-841b-8f72053f1924"
+							"id": "07e210a3-7d2d-4aa0-b794-27b73d609852"
+						},
+						{
+							"name": "debug",
+							"item": [
+								{
+									"name": "{configuration_name}",
+									"item": [
+										{
+											"name": "Debug Configuration",
+											"id": "bd0f2b9b-fd53-43c7-9eda-bc48365cc929",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/debug/:configuration_name?limit=20&show_vectors=false&show_text=false",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"debug",
+														":configuration_name"
+													],
+													"query": [
+														{
+															"key": "limit",
+															"value": "20"
+														},
+														{
+															"key": "show_vectors",
+															"value": "false"
+														},
+														{
+															"key": "show_text",
+															"value": "false"
+														}
+													],
+													"variable": [
+														{
+															"key": "configuration_name",
+															"value": "batch_ml_ai_basics_test",
+															"description": "(Required) "
+														}
+													]
+												},
+												"description": "Debug endpoint to inspect the vectors and chunks in a configuration.\n\nArgs:\n    configuration_name: Name of the configuration to inspect\n    limit: Maximum number of chunks to return\n    show_vectors: Whether to include embedding vectors in the response\n    \nReturns:\n    Dictionary containing chunks and their metadata from the configuration"
+											},
+											"response": [
+												{
+													"id": "73369833-f50f-415d-8834-7288495e86ba",
+													"name": "Successful Response",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/debug/:configuration_name?limit=10&show_vectors=false",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"debug",
+																":configuration_name"
+															],
+															"query": [
+																{
+																	"key": "limit",
+																	"value": "10"
+																},
+																{
+																	"key": "show_vectors",
+																	"value": "false"
+																}
+															],
+															"variable": [
+																{
+																	"key": "configuration_name"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json",
+															"uuid": "2e51d31f-0520-44d2-848e-0db05689b345"
+														}
+													],
+													"cookie": [],
+													"body": "{}"
+												},
+												{
+													"id": "f64602b8-c578-4ba7-ae58-0a06f9c7827f",
+													"name": "Validation Error",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/debug/:configuration_name?limit=10&show_vectors=false",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"debug",
+																":configuration_name"
+															],
+															"query": [
+																{
+																	"key": "limit",
+																	"value": "10"
+																},
+																{
+																	"key": "show_vectors",
+																	"value": "false"
+																}
+															],
+															"variable": [
+																{
+																	"key": "configuration_name"
+																}
+															]
+														}
+													},
+													"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+													"code": 422,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json",
+															"uuid": "a45bbaa2-b352-4424-afd7-ad920f50412c"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"eu aliquip anim\",\n        \"dolor irure Excepteur ullamco\"\n      ],\n      \"msg\": \"dolor\",\n      \"type\": \"Lorem ea consequat exercitation\"\n    },\n    {\n      \"loc\": [\n        \"aute dolor in adipisicing\",\n        \"qui occaecat enim\"\n      ],\n      \"msg\": \"labo\",\n      \"type\": \"fugiat voluptate irure Duis\"\n    }\n  ]\n}"
+												}
+											]
+										}
+									],
+									"id": "76c82544-e1cf-4b68-9854-50afb1d1e7d9"
+								}
+							],
+							"id": "87ded14d-4beb-468f-88be-46a4f533588b"
 						},
 						{
 							"name": "documentation",
@@ -2863,6 +2744,128 @@
 								}
 							],
 							"id": "04da56bb-5cb5-4700-aeba-22a16a3959b4"
+						},
+						{
+							"name": "health",
+							"item": [
+								{
+									"name": "Health Check",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "c432e5e1-73f8-48f9-9a39-df557ebb2ca8",
+												"exec": [
+													"pm.test(\"Response status code is 200\", function () {\r",
+													"    pm.expect(pm.response.code).to.equal(200);\r",
+													"});\r",
+													"\r",
+													"\r",
+													"pm.test(\"Response has required fields: status, version, timestamp, and services\", function () {\r",
+													"    const responseData = pm.response.json();\r",
+													"    \r",
+													"    pm.expect(responseData).to.be.an('object');\r",
+													"    pm.expect(responseData).to.have.all.keys('status', 'version', 'timestamp', 'services');\r",
+													"});\r",
+													"\r",
+													"\r",
+													"pm.test(\"Services object contains required fields\", function () {\r",
+													"    const responseData = pm.response.json();\r",
+													"    \r",
+													"    pm.expect(responseData).to.be.an('object');\r",
+													"    pm.expect(responseData.services).to.be.an('object');\r",
+													"    \r",
+													"    const requiredFields = [\"rag_service\", \"vector_store\", \"embedding\", \"generation\"];\r",
+													"    requiredFields.forEach(field => {\r",
+													"        pm.expect(responseData.services).to.have.property(field);\r",
+													"    });\r",
+													"});\r",
+													"\r",
+													"\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});\r",
+													"\r",
+													"\r",
+													"pm.test(\"Version is a non-empty string\", function () {\r",
+													"    const responseData = pm.response.json();\r",
+													"    \r",
+													"    pm.expect(responseData).to.be.an('object');\r",
+													"    pm.expect(responseData.version).to.exist.and.to.be.a('string').and.to.have.lengthOf.at.least(1, \"Version should not be empty\");\r",
+													"});\r",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {}
+											}
+										}
+									],
+									"id": "0d37f1da-9455-418c-99ed-1966edcbdb1e",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/health",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"health"
+											]
+										},
+										"description": "Health check endpoint."
+									},
+									"response": [
+										{
+											"id": "becc36a2-ff00-424b-8ce0-426043b33145",
+											"name": "Successful Response",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/health",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"health"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json",
+													"uuid": "53debeed-3d15-453f-a491-6d7bc2d58b33"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"status\": \"irure deserunt sed\",\n  \"version\": \"quis\",\n  \"services\": {\n    \"elit4\": \"ex dolor\",\n    \"tempor_bb\": \"anim ea\"\n  },\n  \"timestamp\": \"2015-06-22T17:07:18.814Z\"\n}"
+										}
+									]
+								}
+							],
+							"id": "3ca910f9-41e0-4bf5-95d3-bc432f8a72dd"
 						}
 					],
 					"id": "96d29494-80db-41d1-93fa-33bfa0ecc7fc"
