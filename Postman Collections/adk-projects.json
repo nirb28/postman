@@ -680,6 +680,19 @@
 						"description": "Its looking at this image:\n\n<img src=\"https://www.ilankelman.org/stopsigns/australia.jpg\">\n\nhttps://www.ilankelman.org/stopsigns/australia.jpg"
 					},
 					"response": []
+				},
+				{
+					"name": "NV - Check comparison",
+					"id": "4de57bc0-915d-4080-8cd1-2766e266c122",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"description": "2 checks:\n\n<img src=\"https://content.pstmn.io/30d0094b-ee9c-4e9d-8bf7-16e033fc3f09/aW1hZ2UucG5n\" width=\"586\" height=\"353\">\n\n<img src=\"https://www.shutterstock.com/image-vector/blank-bank-cheque-personal-desk-260nw-1613814310.jpg?referrer=grok.com\" alt=\"\">"
+					},
+					"response": []
 				}
 			],
 			"id": "db0772cf-aa38-4bfc-8560-1ed220772b1c"
