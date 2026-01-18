@@ -734,7 +734,31 @@
 						"url": "https://integrate.api.nvidia.com/v1/chat/completions",
 						"description": "2 checks:\n\n<img src=\"https://content.pstmn.io/30d0094b-ee9c-4e9d-8bf7-16e033fc3f09/aW1hZ2UucG5n\" width=\"586\" height=\"353\">\n\n<img src=\"https://www.shutterstock.com/image-vector/blank-bank-cheque-personal-desk-260nw-1613814310.jpg?referrer=grok.com\" alt=\"\">"
 					},
-					"response": []
+					"response": [
+						{
+							"id": "8367b61f-92f1-4c15-9b79-d743fa5c5f31",
+							"name": "base64",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"model\": \"meta/llama-4-scout-17b-16e-instruct\",\r\n  \"max_tokens\": 1024,\r\n  \"temperature\": 0.2,\r\n  \"top_p\": 1.00,\r\n  \"frequency_penalty\": 0.00,\r\n  \"presence_penalty\": 0.00,\r\n  \"stream\": false,\r\n  \"messages\": [\r\n        {\r\n            \"role\": \"system\",\r\n            \"content\": \"You are a fraud detection expert. Compare the two provided check images for any signs of fraud, such as altered amounts, mismatched signatures, inconsistent handwriting, date discrepancies, or other anomalies. Explain your reasoning step-by-step and conclude if fraud is likely (yes/no) with a confidence level (low/medium/high).\"\r\n        },\r\n        {\r\n            \"role\": \"user\",\r\n            \"content\": [\r\n                {\"type\": \"text\", \"text\": \"Check 1:\"},\r\n                {\r\n                    \"type\": \"image_url\",\r\n                    \"image_url\": {\r\n                        \"url\": \"\"                    }\r\n                },\r\n                {\"type\": \"text\", \"text\": \"Check 2:\"},\r\n                {\r\n                    \"type\": \"image_url\",\r\n                    \"image_url\": {\r\n                        \"url\": \"https://www.shutterstock.com/image-vector/blank-bank-cheque-personal-desk-260nw-1613814310.jpg?referrer=grok.com\"\r\n                    }\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://integrate.api.nvidia.com/v1/chat/completions"
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						}
+					]
 				}
 			],
 			"id": "db0772cf-aa38-4bfc-8560-1ed220772b1c"
