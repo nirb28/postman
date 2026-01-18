@@ -683,6 +683,32 @@
 				},
 				{
 					"name": "NV - Check comparison",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "930235c9-ca0d-471b-8e49-cba640ca7c96",
+								"exec": [
+									"img_check1 = \"\"\r",
+									"img_check2 = \"\"\r",
+									"pm.environment.set(\"img_check1\", img_check1)\r",
+									"pm.environment.set(\"img_check2\", img_check2)\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "79bde741-a536-426b-a791-7213084a0ce4",
+								"exec": [],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "4de57bc0-915d-4080-8cd1-2766e266c122",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
