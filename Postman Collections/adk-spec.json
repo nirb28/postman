@@ -1,0 +1,1636 @@
+{
+	"info": {
+		"_postman_id": "05075a4e-455e-45b4-b266-5c82a49b8a8c",
+		"name": "Agent Development Kit (SPEC))",
+		"description": "Simple base agent development framework with YAML configs and REST APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "tools",
+					"item": [
+						{
+							"name": "{tool_name}",
+							"item": [
+								{
+									"name": "schema",
+									"item": [
+										{
+											"name": "Get Tool Schema",
+											"id": "9e722bf7-3101-4d0e-b514-78a633578c71",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/admin/tools/:tool_name/schema",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"admin",
+														"tools",
+														":tool_name",
+														"schema"
+													],
+													"variable": [
+														{
+															"id": "c311ab5a-db57-4b96-a696-e7a4319c0b56",
+															"key": "tool_name",
+															"value": "string"
+														}
+													]
+												},
+												"description": "Get OpenAI function calling schema for a tool."
+											},
+											"response": [
+												{
+													"id": "b0229d8e-ddd3-4728-80af-df0d2e12d68f",
+													"name": "Successful Response",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/admin/tools/:tool_name/schema",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"admin",
+																"tools",
+																":tool_name",
+																"schema"
+															],
+															"variable": [
+																{
+																	"key": "tool_name",
+																	"value": "string"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": ""
+												},
+												{
+													"id": "0bb61886-91ab-43e8-a563-d54e6e7b8c7d",
+													"name": "Validation Error",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/admin/tools/:tool_name/schema",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"admin",
+																"tools",
+																":tool_name",
+																"schema"
+															],
+															"variable": [
+																{
+																	"key": "tool_name",
+																	"value": "string"
+																}
+															]
+														}
+													},
+													"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+													"code": 422,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        4491,\n        6297\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        6766\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}"
+												}
+											]
+										}
+									],
+									"id": "5079f732-7b66-41c6-9859-82772ba348e6"
+								},
+								{
+									"name": "Get Tool",
+									"id": "e88642ac-a2f5-4c40-9a35-4836a4874180",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/admin/tools/:tool_name",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"admin",
+												"tools",
+												":tool_name"
+											],
+											"variable": [
+												{
+													"id": "4fe3e727-a43a-4fb2-87a9-422935f42bd7",
+													"key": "tool_name",
+													"value": "string"
+												}
+											]
+										},
+										"description": "Get a specific tool configuration."
+									},
+									"response": [
+										{
+											"id": "2d88edd1-df97-45b5-9020-a2bce8bad1e3",
+											"name": "Successful Response",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/admin/tools/:tool_name",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"admin",
+														"tools",
+														":tool_name"
+													],
+													"variable": [
+														{
+															"key": "tool_name",
+															"value": "string"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"api\",\n  \"parameters\": [\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    },\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    }\n  ],\n  \"function_name\": \"string\",\n  \"module_path\": \"string\",\n  \"api_endpoint\": null,\n  \"api_method\": null,\n  \"api_headers\": {\n    \"key_0\": \"string\"\n  },\n  \"python_code\": \"string\",\n  \"metadata\": {\n    \"key_0\": 8595.409677258867,\n    \"key_1\": 9350\n  }\n}"
+										},
+										{
+											"id": "a3b445a9-ea90-449a-8a92-1c9351a6bcd6",
+											"name": "Validation Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/admin/tools/:tool_name",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"admin",
+														"tools",
+														":tool_name"
+													],
+													"variable": [
+														{
+															"key": "tool_name",
+															"value": "string"
+														}
+													]
+												}
+											},
+											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+											"code": 422,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        4491,\n        6297\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        6766\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}"
+										}
+									]
+								},
+								{
+									"name": "Update Tool",
+									"id": "d4ee3e55-e394-47d3-80e9-9b705d0b2dd8",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"api\",\n  \"parameters\": [\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    },\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    }\n  ],\n  \"function_name\": \"string\",\n  \"module_path\": \"string\",\n  \"api_endpoint\": null,\n  \"api_method\": null,\n  \"api_headers\": {\n    \"key_0\": \"string\"\n  },\n  \"python_code\": \"string\",\n  \"metadata\": {\n    \"key_0\": 8595.409677258867,\n    \"key_1\": 9350\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/admin/tools/:tool_name",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"admin",
+												"tools",
+												":tool_name"
+											],
+											"variable": [
+												{
+													"id": "7d391734-f8a4-49a1-932e-6ea62fb2c2a9",
+													"key": "tool_name",
+													"value": "string"
+												}
+											]
+										},
+										"description": "Update an existing tool."
+									},
+									"response": [
+										{
+											"id": "4aec750f-41c1-4dcd-849d-ea49e1b3c125",
+											"name": "Successful Response",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"api\",\n  \"parameters\": [\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    },\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    }\n  ],\n  \"function_name\": \"string\",\n  \"module_path\": \"string\",\n  \"api_endpoint\": null,\n  \"api_method\": null,\n  \"api_headers\": {\n    \"key_0\": \"string\"\n  },\n  \"python_code\": \"string\",\n  \"metadata\": {\n    \"key_0\": 8595.409677258867,\n    \"key_1\": 9350\n  }\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/admin/tools/:tool_name",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"admin",
+														"tools",
+														":tool_name"
+													],
+													"variable": [
+														{
+															"key": "tool_name",
+															"value": "string"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"api\",\n  \"parameters\": [\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    },\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    }\n  ],\n  \"function_name\": \"string\",\n  \"module_path\": \"string\",\n  \"api_endpoint\": null,\n  \"api_method\": null,\n  \"api_headers\": {\n    \"key_0\": \"string\"\n  },\n  \"python_code\": \"string\",\n  \"metadata\": {\n    \"key_0\": 8595.409677258867,\n    \"key_1\": 9350\n  }\n}"
+										},
+										{
+											"id": "8657ba29-2098-4513-b925-414f0913fad9",
+											"name": "Validation Error",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"api\",\n  \"parameters\": [\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    },\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    }\n  ],\n  \"function_name\": \"string\",\n  \"module_path\": \"string\",\n  \"api_endpoint\": null,\n  \"api_method\": null,\n  \"api_headers\": {\n    \"key_0\": \"string\"\n  },\n  \"python_code\": \"string\",\n  \"metadata\": {\n    \"key_0\": 8595.409677258867,\n    \"key_1\": 9350\n  }\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/admin/tools/:tool_name",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"admin",
+														"tools",
+														":tool_name"
+													],
+													"variable": [
+														{
+															"key": "tool_name",
+															"value": "string"
+														}
+													]
+												}
+											},
+											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+											"code": 422,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        4491,\n        6297\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        6766\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}"
+										}
+									]
+								},
+								{
+									"name": "Delete Tool",
+									"id": "c53f7eae-caa1-4e98-9abb-0eb9529ef5c5",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/admin/tools/:tool_name",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"admin",
+												"tools",
+												":tool_name"
+											],
+											"variable": [
+												{
+													"id": "512aade3-a8bf-4a4a-a6ff-5a9491cc6f8f",
+													"key": "tool_name",
+													"value": "string"
+												}
+											]
+										},
+										"description": "Delete a tool."
+									},
+									"response": [
+										{
+											"id": "9f7608b7-a6e8-4d45-ad91-c3649c4df5bb",
+											"name": "Successful Response",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/admin/tools/:tool_name",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"admin",
+														"tools",
+														":tool_name"
+													],
+													"variable": [
+														{
+															"key": "tool_name",
+															"value": "string"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"responseTime": null,
+											"body": null
+										},
+										{
+											"id": "1438f1d2-8610-4f40-8f8c-d704f74d3287",
+											"name": "Validation Error",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/admin/tools/:tool_name",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"admin",
+														"tools",
+														":tool_name"
+													],
+													"variable": [
+														{
+															"key": "tool_name",
+															"value": "string"
+														}
+													]
+												}
+											},
+											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+											"code": 422,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        4491,\n        6297\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        6766\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}"
+										}
+									]
+								}
+							],
+							"id": "4fc30180-0967-4722-aa2f-b24db22798ff"
+						},
+						{
+							"name": "List Tools",
+							"id": "59617cf0-9f4e-49ad-9dfb-bb506815f1ec",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": "{{adk2-baseUrl}}/admin/tools",
+								"description": "List all available tools."
+							},
+							"response": [
+								{
+									"id": "a74f2f43-36d9-4d93-9da8-5e6cc386729c",
+									"name": "Successful Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": "{{baseUrl}}/admin/tools"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "[\n  \"string\",\n  \"string\"\n]"
+								}
+							]
+						},
+						{
+							"name": "Create Tool",
+							"id": "55b3b45f-5e75-41ac-9578-56b11b6548b4",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"api\",\n  \"parameters\": [\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    },\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    }\n  ],\n  \"function_name\": \"string\",\n  \"module_path\": \"string\",\n  \"api_endpoint\": null,\n  \"api_method\": null,\n  \"api_headers\": {\n    \"key_0\": \"string\"\n  },\n  \"python_code\": \"string\",\n  \"metadata\": {\n    \"key_0\": 8595.409677258867,\n    \"key_1\": 9350\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/admin/tools",
+								"description": "Create a new tool."
+							},
+							"response": [
+								{
+									"id": "07b146cc-044b-454c-a02e-203677764ef7",
+									"name": "Successful Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"api\",\n  \"parameters\": [\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    },\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    }\n  ],\n  \"function_name\": \"string\",\n  \"module_path\": \"string\",\n  \"api_endpoint\": null,\n  \"api_method\": null,\n  \"api_headers\": {\n    \"key_0\": \"string\"\n  },\n  \"python_code\": \"string\",\n  \"metadata\": {\n    \"key_0\": 8595.409677258867,\n    \"key_1\": 9350\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/admin/tools"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"api\",\n  \"parameters\": [\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    },\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    }\n  ],\n  \"function_name\": \"string\",\n  \"module_path\": \"string\",\n  \"api_endpoint\": null,\n  \"api_method\": null,\n  \"api_headers\": {\n    \"key_0\": \"string\"\n  },\n  \"python_code\": \"string\",\n  \"metadata\": {\n    \"key_0\": 8595.409677258867,\n    \"key_1\": 9350\n  }\n}"
+								},
+								{
+									"id": "cece5b56-1ee8-4c8a-aeec-f74537706982",
+									"name": "Validation Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"api\",\n  \"parameters\": [\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    },\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    }\n  ],\n  \"function_name\": \"string\",\n  \"module_path\": \"string\",\n  \"api_endpoint\": null,\n  \"api_method\": null,\n  \"api_headers\": {\n    \"key_0\": \"string\"\n  },\n  \"python_code\": \"string\",\n  \"metadata\": {\n    \"key_0\": 8595.409677258867,\n    \"key_1\": 9350\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/admin/tools"
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        4491,\n        6297\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        6766\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}"
+								}
+							]
+						}
+					],
+					"id": "a46a52fe-6489-499e-9830-fdc828c03fdc"
+				},
+				{
+					"name": "agents",
+					"item": [
+						{
+							"name": "{agent_name}",
+							"item": [
+								{
+									"name": "Get Agent",
+									"id": "2db55ee5-ae2c-4acf-94f3-b51724b11007",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/admin/agents/:agent_name",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"admin",
+												"agents",
+												":agent_name"
+											],
+											"variable": [
+												{
+													"id": "b6bda37e-568d-4e4d-9c9b-10f1f56cdac9",
+													"key": "agent_name",
+													"value": "string"
+												}
+											]
+										},
+										"description": "Get a specific agent configuration."
+									},
+									"response": [
+										{
+											"id": "7270c86a-481f-4097-9ea4-a4d7a8713f0b",
+											"name": "Successful Response",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/admin/agents/:agent_name",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"admin",
+														"agents",
+														":agent_name"
+													],
+													"variable": [
+														{
+															"key": "agent_name",
+															"value": "string"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"llm_config\": {\n    \"provider\": \"string\",\n    \"model\": \"string\",\n    \"api_key\": \"string\",\n    \"base_url\": \"string\",\n    \"temperature\": 0.7,\n    \"max_tokens\": 2000,\n    \"additional_params\": {\n      \"key_0\": \"string\",\n      \"key_1\": 9859\n    }\n  },\n  \"system_prompt\": \"string\",\n  \"tools\": [\n    \"string\",\n    \"string\"\n  ],\n  \"max_iterations\": 10,\n  \"framework\": \"langgraph\",\n  \"metadata\": {\n    \"key_0\": \"string\"\n  }\n}"
+										},
+										{
+											"id": "7a0a2499-f5a4-42fc-b5fc-4025f2c37bfb",
+											"name": "Validation Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/admin/agents/:agent_name",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"admin",
+														"agents",
+														":agent_name"
+													],
+													"variable": [
+														{
+															"key": "agent_name",
+															"value": "string"
+														}
+													]
+												}
+											},
+											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+											"code": 422,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        4491,\n        6297\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        6766\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}"
+										}
+									]
+								},
+								{
+									"name": "Update Agent",
+									"id": "16151182-b555-4e71-a62b-c28f845ba1bb",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"llm_config\": {\n    \"provider\": \"string\",\n    \"model\": \"string\",\n    \"api_key\": \"string\",\n    \"base_url\": \"string\",\n    \"temperature\": 0.7,\n    \"max_tokens\": 2000,\n    \"additional_params\": {\n      \"key_0\": \"string\",\n      \"key_1\": 9859\n    }\n  },\n  \"system_prompt\": \"string\",\n  \"tools\": [\n    \"string\",\n    \"string\"\n  ],\n  \"max_iterations\": 10,\n  \"framework\": \"langgraph\",\n  \"metadata\": {\n    \"key_0\": \"string\"\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/admin/agents/:agent_name",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"admin",
+												"agents",
+												":agent_name"
+											],
+											"variable": [
+												{
+													"id": "d38957af-81cc-4276-95bb-4118885fd98d",
+													"key": "agent_name",
+													"value": "string"
+												}
+											]
+										},
+										"description": "Update an existing agent."
+									},
+									"response": [
+										{
+											"id": "68cc5d9c-170c-48ed-b95e-9d0fcd82ce76",
+											"name": "Successful Response",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"llm_config\": {\n    \"provider\": \"string\",\n    \"model\": \"string\",\n    \"api_key\": \"string\",\n    \"base_url\": \"string\",\n    \"temperature\": 0.7,\n    \"max_tokens\": 2000,\n    \"additional_params\": {\n      \"key_0\": \"string\",\n      \"key_1\": 9859\n    }\n  },\n  \"system_prompt\": \"string\",\n  \"tools\": [\n    \"string\",\n    \"string\"\n  ],\n  \"max_iterations\": 10,\n  \"framework\": \"langgraph\",\n  \"metadata\": {\n    \"key_0\": \"string\"\n  }\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/admin/agents/:agent_name",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"admin",
+														"agents",
+														":agent_name"
+													],
+													"variable": [
+														{
+															"key": "agent_name",
+															"value": "string"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"llm_config\": {\n    \"provider\": \"string\",\n    \"model\": \"string\",\n    \"api_key\": \"string\",\n    \"base_url\": \"string\",\n    \"temperature\": 0.7,\n    \"max_tokens\": 2000,\n    \"additional_params\": {\n      \"key_0\": \"string\",\n      \"key_1\": 9859\n    }\n  },\n  \"system_prompt\": \"string\",\n  \"tools\": [\n    \"string\",\n    \"string\"\n  ],\n  \"max_iterations\": 10,\n  \"framework\": \"langgraph\",\n  \"metadata\": {\n    \"key_0\": \"string\"\n  }\n}"
+										},
+										{
+											"id": "91b867df-b4c6-4c5a-ab0c-28e943712d87",
+											"name": "Validation Error",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"llm_config\": {\n    \"provider\": \"string\",\n    \"model\": \"string\",\n    \"api_key\": \"string\",\n    \"base_url\": \"string\",\n    \"temperature\": 0.7,\n    \"max_tokens\": 2000,\n    \"additional_params\": {\n      \"key_0\": \"string\",\n      \"key_1\": 9859\n    }\n  },\n  \"system_prompt\": \"string\",\n  \"tools\": [\n    \"string\",\n    \"string\"\n  ],\n  \"max_iterations\": 10,\n  \"framework\": \"langgraph\",\n  \"metadata\": {\n    \"key_0\": \"string\"\n  }\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/admin/agents/:agent_name",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"admin",
+														"agents",
+														":agent_name"
+													],
+													"variable": [
+														{
+															"key": "agent_name",
+															"value": "string"
+														}
+													]
+												}
+											},
+											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+											"code": 422,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        4491,\n        6297\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        6766\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}"
+										}
+									]
+								},
+								{
+									"name": "Delete Agent",
+									"id": "71b1ed8f-28d1-4ebf-8b21-46f278a5c964",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/admin/agents/:agent_name",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"admin",
+												"agents",
+												":agent_name"
+											],
+											"variable": [
+												{
+													"id": "3d105af0-ad01-4719-95ad-bfc5533fe2ce",
+													"key": "agent_name",
+													"value": "string"
+												}
+											]
+										},
+										"description": "Delete an agent."
+									},
+									"response": [
+										{
+											"id": "08bc00cb-bd5e-4480-a99d-1a4c333acda7",
+											"name": "Successful Response",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/admin/agents/:agent_name",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"admin",
+														"agents",
+														":agent_name"
+													],
+													"variable": [
+														{
+															"key": "agent_name",
+															"value": "string"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"responseTime": null,
+											"body": null
+										},
+										{
+											"id": "3b1d38c7-88be-458c-baa4-5267dd83714e",
+											"name": "Validation Error",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/admin/agents/:agent_name",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"admin",
+														"agents",
+														":agent_name"
+													],
+													"variable": [
+														{
+															"key": "agent_name",
+															"value": "string"
+														}
+													]
+												}
+											},
+											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+											"code": 422,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        4491,\n        6297\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        6766\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}"
+										}
+									]
+								}
+							],
+							"id": "d14984dc-aa48-436f-8ffc-d37f25a0fe33"
+						},
+						{
+							"name": "List Agents",
+							"id": "8f8b38dc-37b2-4497-be87-be0d236600ca",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": "{{baseUrl}}/admin/agents",
+								"description": "List all available agents."
+							},
+							"response": [
+								{
+									"id": "c85c103a-349c-4989-8764-01be9d0e2fef",
+									"name": "Successful Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": "{{baseUrl}}/admin/agents"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "[\n  \"string\",\n  \"string\"\n]"
+								}
+							]
+						},
+						{
+							"name": "Create Agent",
+							"id": "27186662-ddee-4216-8f9f-f58de0f7da18",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"llm_config\": {\n    \"provider\": \"string\",\n    \"model\": \"string\",\n    \"api_key\": \"string\",\n    \"base_url\": \"string\",\n    \"temperature\": 0.7,\n    \"max_tokens\": 2000,\n    \"additional_params\": {\n      \"key_0\": \"string\",\n      \"key_1\": 9859\n    }\n  },\n  \"system_prompt\": \"string\",\n  \"tools\": [\n    \"string\",\n    \"string\"\n  ],\n  \"max_iterations\": 10,\n  \"framework\": \"langgraph\",\n  \"metadata\": {\n    \"key_0\": \"string\"\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/admin/agents",
+								"description": "Create a new agent."
+							},
+							"response": [
+								{
+									"id": "c022f338-7500-40f5-bff9-894a7b90bd4a",
+									"name": "Successful Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"llm_config\": {\n    \"provider\": \"string\",\n    \"model\": \"string\",\n    \"api_key\": \"string\",\n    \"base_url\": \"string\",\n    \"temperature\": 0.7,\n    \"max_tokens\": 2000,\n    \"additional_params\": {\n      \"key_0\": \"string\",\n      \"key_1\": 9859\n    }\n  },\n  \"system_prompt\": \"string\",\n  \"tools\": [\n    \"string\",\n    \"string\"\n  ],\n  \"max_iterations\": 10,\n  \"framework\": \"langgraph\",\n  \"metadata\": {\n    \"key_0\": \"string\"\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/admin/agents"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"llm_config\": {\n    \"provider\": \"string\",\n    \"model\": \"string\",\n    \"api_key\": \"string\",\n    \"base_url\": \"string\",\n    \"temperature\": 0.7,\n    \"max_tokens\": 2000,\n    \"additional_params\": {\n      \"key_0\": \"string\",\n      \"key_1\": 9859\n    }\n  },\n  \"system_prompt\": \"string\",\n  \"tools\": [\n    \"string\",\n    \"string\"\n  ],\n  \"max_iterations\": 10,\n  \"framework\": \"langgraph\",\n  \"metadata\": {\n    \"key_0\": \"string\"\n  }\n}"
+								},
+								{
+									"id": "5e9ea8d4-a6c1-4935-b651-dc04e4e735a0",
+									"name": "Validation Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"llm_config\": {\n    \"provider\": \"string\",\n    \"model\": \"string\",\n    \"api_key\": \"string\",\n    \"base_url\": \"string\",\n    \"temperature\": 0.7,\n    \"max_tokens\": 2000,\n    \"additional_params\": {\n      \"key_0\": \"string\",\n      \"key_1\": 9859\n    }\n  },\n  \"system_prompt\": \"string\",\n  \"tools\": [\n    \"string\",\n    \"string\"\n  ],\n  \"max_iterations\": 10,\n  \"framework\": \"langgraph\",\n  \"metadata\": {\n    \"key_0\": \"string\"\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/admin/agents"
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        4491,\n        6297\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        6766\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}"
+								}
+							]
+						}
+					],
+					"id": "b64ea95e-edf0-4bb7-a97c-3ffbdd895ff2"
+				}
+			],
+			"id": "7de3f290-7b1f-4119-9707-bf54a2e08e15"
+		},
+		{
+			"name": "execute",
+			"item": [
+				{
+					"name": "tool",
+					"item": [
+						{
+							"name": "Execute Tool",
+							"id": "d014fad1-f3cd-49e0-ab8d-9901875932c8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"tool_name\": \"string\",\n  \"parameters\": {\n    \"key_0\": 7824\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/execute/tool",
+								"description": "Execute a tool with given parameters."
+							},
+							"response": [
+								{
+									"id": "4441d3b6-1c55-437b-bfe3-259c9ae2c20f",
+									"name": "Successful Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"tool_name\": \"string\",\n  \"parameters\": {\n    \"key_0\": 7824\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/execute/tool"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"tool_name\": \"string\",\n  \"success\": false,\n  \"result\": \"\",\n  \"execution_time\": 8708.817978961242,\n  \"error\": null\n}"
+								},
+								{
+									"id": "52104840-4b0f-4655-88a1-a40e1e70a279",
+									"name": "Validation Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"tool_name\": \"string\",\n  \"parameters\": {\n    \"key_0\": 7824\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/execute/tool"
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        4491,\n        6297\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        6766\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}"
+								}
+							]
+						}
+					],
+					"id": "252a94fa-6cb0-44e3-8c78-0a1dec18904c"
+				},
+				{
+					"name": "agent",
+					"item": [
+						{
+							"name": "Execute Agent",
+							"id": "a3c8ea97-a88d-4824-89b5-ef66194ff8a8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"agent_name\": \"string\",\n  \"input\": \"string\",\n  \"context\": {\n    \"key_0\": 8969\n  },\n  \"stream\": false\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/execute/agent",
+								"description": "Execute an agent with given input."
+							},
+							"response": [
+								{
+									"id": "416f01f8-a32f-431d-9d53-0958aad36468",
+									"name": "Successful Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"agent_name\": \"string\",\n  \"input\": \"string\",\n  \"context\": {\n    \"key_0\": 8969\n  },\n  \"stream\": false\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/execute/agent"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"agent_name\": \"string\",\n  \"success\": true,\n  \"output\": \"string\",\n  \"execution_time\": 8221.562251861329,\n  \"steps\": [\n    {\n      \"key_0\": 5157,\n      \"key_1\": true\n    },\n    {\n      \"key_0\": \"string\"\n    }\n  ],\n  \"error\": null\n}"
+								},
+								{
+									"id": "848ab265-d576-48f7-a253-69993d521cc9",
+									"name": "Validation Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"agent_name\": \"string\",\n  \"input\": \"string\",\n  \"context\": {\n    \"key_0\": 8969\n  },\n  \"stream\": false\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/execute/agent"
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        4491,\n        6297\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        6766\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}"
+								}
+							]
+						}
+					],
+					"id": "c7fa984a-5beb-4e2f-be7a-173b300cc5cb"
+				}
+			],
+			"id": "7c14edb6-8543-4244-b7f6-18e68ac30c90"
+		},
+		{
+			"name": "/",
+			"item": [
+				{
+					"name": "Root",
+					"id": "e60335c5-8a5c-4959-bb1f-e728dd3fa95f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": "{{baseUrl}}/",
+						"description": "Root endpoint with API information."
+					},
+					"response": [
+						{
+							"id": "9bf97c4d-a859-4c6c-bb41-e9d62b13e422",
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": "{{baseUrl}}/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						}
+					]
+				}
+			],
+			"id": "1a6a592b-9fb9-408f-b11b-cd160f5e1867"
+		},
+		{
+			"name": "health",
+			"item": [
+				{
+					"name": "Health",
+					"id": "e6f018a5-4c5c-4db4-aac3-a1d322bf5391",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": "{{baseUrl}}/health",
+						"description": "Health check endpoint."
+					},
+					"response": [
+						{
+							"id": "b4e42cfd-c84d-4720-a1e7-1307dc6836cf",
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": "{{baseUrl}}/health"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						}
+					]
+				}
+			],
+			"id": "2457e2a2-0301-4e04-8a62-f853aaef0003"
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/"
+		}
+	]
+}
