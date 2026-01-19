@@ -545,6 +545,28 @@
 						"url": "{{adk2-baseUrl}}/execute/tool"
 					},
 					"response": []
+				},
+				{
+					"name": "calculator Copy",
+					"id": "8fa16e71-dde5-48bf-a96f-cb9fc19b298e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"tool_name\": \"calculator\",\r\n            \"parameters\": {\r\n                \"expression\": \"2 + 2\"\r\n            }\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{adk2-baseUrl}}/execute/tool"
+					},
+					"response": []
 				}
 			],
 			"id": "cd164bbe-5727-44f4-9c5b-0aae631f9099"
