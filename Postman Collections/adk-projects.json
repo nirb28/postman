@@ -885,7 +885,7 @@
 										}
 									}
 								},
-								"url": "{{adk2-baseUrl}}/execute/tool"
+								"url": "{{adk2-baseUrl}}/execute/graph"
 							},
 							"_postman_previewlanguage": null,
 							"header": null,
@@ -901,14 +901,14 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"graph_id\": \"tool-payload-demo\",\r\n  \"input\": {\r\n    \"expression\": \"21 * 2\"\r\n  },\r\n  \"context\": {}\r\n}",
+									"raw": "{\r\n  \"graph_id\": \"tool_payload_demo\",\r\n  \"input\": {\r\n    \"expression\": \"21 * 2\"\r\n  },\r\n  \"context\": {}\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
 										}
 									}
 								},
-								"url": "{{adk2-baseUrl}}/execute/tool"
+								"url": "{{adk2-baseUrl}}/execute/graph"
 							},
 							"_postman_previewlanguage": null,
 							"header": null,
