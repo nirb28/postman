@@ -545,28 +545,6 @@
 						"url": "{{adk2-baseUrl}}/execute/tool"
 					},
 					"response": []
-				},
-				{
-					"name": "calculator Copy",
-					"id": "8fa16e71-dde5-48bf-a96f-cb9fc19b298e",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n            \"tool_name\": \"calculator\",\r\n            \"parameters\": {\r\n                \"expression\": \"2 + 2\"\r\n            }\r\n        }",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{adk2-baseUrl}}/execute/tool"
-					},
-					"response": []
 				}
 			],
 			"id": "cd164bbe-5727-44f4-9c5b-0aae631f9099"
@@ -872,14 +850,24 @@
 			"name": "graphs",
 			"item": [
 				{
-					"name": "New Request",
-					"id": "8c2848a5-30a3-431a-b2a1-d50c34ab3773",
+					"name": "graph-exec",
+					"id": "93e8b39a-4ac9-4a1d-a1e0-b16c25a129a3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"graph_id\": \"hello-langgraph\",\r\n    \"parameters\": {\r\n        \"expression\": \"2 + 2\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{adk2-baseUrl}}/execute/tool"
 					},
 					"response": []
 				}
