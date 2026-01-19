@@ -860,16 +860,63 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"graph_id\": \"hello-langgraph\",\r\n    \"parameters\": {\r\n        \"expression\": \"2 + 2\"\r\n    }\r\n}",
+							"raw": "{\r\n  \"graph_id\": \"hello-langgraph\",\r\n  \"input\": {\r\n    \"message\": \"Hello there\"\r\n  },\r\n  \"context\": {}\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{adk2-baseUrl}}/execute/tool"
+						"url": "{{adk2-baseUrl}}/execute/graph"
 					},
-					"response": []
+					"response": [
+						{
+							"id": "a90e07c1-c3d5-4351-b328-cf446404441d",
+							"name": "research_summarize",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"graph_id\": \"research_summarize\",\r\n  \"input\": {\r\n    \"topic\": \"Impact of retrieval augmented generation\"\r\n  },\r\n  \"context\": {}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{adk2-baseUrl}}/execute/tool"
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						},
+						{
+							"id": "06c091b0-8175-4348-9735-053b448b1f57",
+							"name": "tool_payload_demo",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"graph_id\": \"tool-payload-demo\",\r\n  \"input\": {\r\n    \"expression\": \"21 * 2\"\r\n  },\r\n  \"context\": {}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{adk2-baseUrl}}/execute/tool"
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						}
+					]
 				}
 			],
 			"id": "e03b0757-0d58-462b-a2c1-aaf7773e90a1"
