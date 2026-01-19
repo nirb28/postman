@@ -45,7 +45,6 @@
 													],
 													"variable": [
 														{
-															"id": "c311ab5a-db57-4b96-a696-e7a4319c0b56",
 															"key": "tool_name",
 															"value": "string"
 														}
@@ -171,7 +170,6 @@
 											],
 											"variable": [
 												{
-													"id": "4fe3e727-a43a-4fb2-87a9-422935f42bd7",
 													"key": "tool_name",
 													"value": "string"
 												}
@@ -220,7 +218,7 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"api\",\n  \"parameters\": [\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    },\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    }\n  ],\n  \"function_name\": \"string\",\n  \"module_path\": \"string\",\n  \"api_endpoint\": null,\n  \"api_method\": null,\n  \"api_headers\": {\n    \"key_0\": \"string\"\n  },\n  \"python_code\": \"string\",\n  \"metadata\": {\n    \"key_0\": 8595.409677258867,\n    \"key_1\": 9350\n  }\n}"
+											"body": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"api\",\n  \"parameters\": [\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    },\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    }\n  ],\n  \"function_name\": \"string\",\n  \"module_path\": \"string\",\n  \"api_endpoint\": null,\n  \"api_method\": null,\n  \"api_headers\": {\n    \"key_0\": \"string\"\n  },\n  \"python_code\": \"string\",\n  \"metadata\": {\n    \"key_0\": 8595.409677258867\n  }\n}"
 										},
 										{
 											"id": "a3b445a9-ea90-449a-8a92-1c9351a6bcd6",
@@ -286,7 +284,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"api\",\n  \"parameters\": [\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    },\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    }\n  ],\n  \"function_name\": \"string\",\n  \"module_path\": \"string\",\n  \"api_endpoint\": null,\n  \"api_method\": null,\n  \"api_headers\": {\n    \"key_0\": \"string\"\n  },\n  \"python_code\": \"string\",\n  \"metadata\": {\n    \"key_0\": 8595.409677258867,\n    \"key_1\": 9350\n  }\n}",
+											"raw": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"api\",\n  \"parameters\": [\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    },\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    }\n  ],\n  \"function_name\": \"string\",\n  \"module_path\": \"string\",\n  \"api_endpoint\": null,\n  \"api_method\": null,\n  \"api_headers\": {\n    \"key_0\": \"string\"\n  },\n  \"python_code\": \"string\",\n  \"metadata\": {\n    \"key_0\": 8595.409677258867\n  }\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -306,7 +304,6 @@
 											],
 											"variable": [
 												{
-													"id": "7d391734-f8a4-49a1-932e-6ea62fb2c2a9",
 													"key": "tool_name",
 													"value": "string"
 												}
@@ -332,7 +329,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"api\",\n  \"parameters\": [\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    },\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    }\n  ],\n  \"function_name\": \"string\",\n  \"module_path\": \"string\",\n  \"api_endpoint\": null,\n  \"api_method\": null,\n  \"api_headers\": {\n    \"key_0\": \"string\"\n  },\n  \"python_code\": \"string\",\n  \"metadata\": {\n    \"key_0\": 8595.409677258867,\n    \"key_1\": 9350\n  }\n}",
+													"raw": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"api\",\n  \"parameters\": [\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    },\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    }\n  ],\n  \"function_name\": \"string\",\n  \"module_path\": \"string\",\n  \"api_endpoint\": null,\n  \"api_method\": null,\n  \"api_headers\": {\n    \"key_0\": \"string\"\n  },\n  \"python_code\": \"string\",\n  \"metadata\": {\n    \"key_0\": 8595.409677258867\n  }\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -369,7 +366,7 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"api\",\n  \"parameters\": [\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    },\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    }\n  ],\n  \"function_name\": \"string\",\n  \"module_path\": \"string\",\n  \"api_endpoint\": null,\n  \"api_method\": null,\n  \"api_headers\": {\n    \"key_0\": \"string\"\n  },\n  \"python_code\": \"string\",\n  \"metadata\": {\n    \"key_0\": 8595.409677258867,\n    \"key_1\": 9350\n  }\n}"
+											"body": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"api\",\n  \"parameters\": [\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    },\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    }\n  ],\n  \"function_name\": \"string\",\n  \"module_path\": \"string\",\n  \"api_endpoint\": null,\n  \"api_method\": null,\n  \"api_headers\": {\n    \"key_0\": \"string\"\n  },\n  \"python_code\": \"string\",\n  \"metadata\": {\n    \"key_0\": 8595.409677258867\n  }\n}"
 										},
 										{
 											"id": "8657ba29-2098-4513-b925-414f0913fad9",
@@ -388,7 +385,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"api\",\n  \"parameters\": [\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    },\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    }\n  ],\n  \"function_name\": \"string\",\n  \"module_path\": \"string\",\n  \"api_endpoint\": null,\n  \"api_method\": null,\n  \"api_headers\": {\n    \"key_0\": \"string\"\n  },\n  \"python_code\": \"string\",\n  \"metadata\": {\n    \"key_0\": 8595.409677258867,\n    \"key_1\": 9350\n  }\n}",
+													"raw": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"api\",\n  \"parameters\": [\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    },\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    }\n  ],\n  \"function_name\": \"string\",\n  \"module_path\": \"string\",\n  \"api_endpoint\": null,\n  \"api_method\": null,\n  \"api_headers\": {\n    \"key_0\": \"string\"\n  },\n  \"python_code\": \"string\",\n  \"metadata\": {\n    \"key_0\": 8595.409677258867\n  }\n}",
 													"options": {
 														"raw": {
 															"headerFamily": "json",
@@ -455,7 +452,6 @@
 											],
 											"variable": [
 												{
-													"id": "512aade3-a8bf-4a4a-a6ff-5a9491cc6f8f",
 													"key": "tool_name",
 													"value": "string"
 												}
@@ -557,7 +553,7 @@
 										"value": "application/json"
 									}
 								],
-								"url": "{{adk2-baseUrl}}/admin/tools",
+								"url": "{{baseUrl}}/admin/tools",
 								"description": "List all available tools."
 							},
 							"response": [
@@ -609,7 +605,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"api\",\n  \"parameters\": [\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    },\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    }\n  ],\n  \"function_name\": \"string\",\n  \"module_path\": \"string\",\n  \"api_endpoint\": null,\n  \"api_method\": null,\n  \"api_headers\": {\n    \"key_0\": \"string\"\n  },\n  \"python_code\": \"string\",\n  \"metadata\": {\n    \"key_0\": 8595.409677258867,\n    \"key_1\": 9350\n  }\n}",
+									"raw": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"api\",\n  \"parameters\": [\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    },\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    }\n  ],\n  \"function_name\": \"string\",\n  \"module_path\": \"string\",\n  \"api_endpoint\": null,\n  \"api_method\": null,\n  \"api_headers\": {\n    \"key_0\": \"string\"\n  },\n  \"python_code\": \"string\",\n  \"metadata\": {\n    \"key_0\": 8595.409677258867\n  }\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -638,7 +634,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"api\",\n  \"parameters\": [\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    },\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    }\n  ],\n  \"function_name\": \"string\",\n  \"module_path\": \"string\",\n  \"api_endpoint\": null,\n  \"api_method\": null,\n  \"api_headers\": {\n    \"key_0\": \"string\"\n  },\n  \"python_code\": \"string\",\n  \"metadata\": {\n    \"key_0\": 8595.409677258867,\n    \"key_1\": 9350\n  }\n}",
+											"raw": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"api\",\n  \"parameters\": [\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    },\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    }\n  ],\n  \"function_name\": \"string\",\n  \"module_path\": \"string\",\n  \"api_endpoint\": null,\n  \"api_method\": null,\n  \"api_headers\": {\n    \"key_0\": \"string\"\n  },\n  \"python_code\": \"string\",\n  \"metadata\": {\n    \"key_0\": 8595.409677258867\n  }\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -659,7 +655,7 @@
 									],
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"api\",\n  \"parameters\": [\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    },\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    }\n  ],\n  \"function_name\": \"string\",\n  \"module_path\": \"string\",\n  \"api_endpoint\": null,\n  \"api_method\": null,\n  \"api_headers\": {\n    \"key_0\": \"string\"\n  },\n  \"python_code\": \"string\",\n  \"metadata\": {\n    \"key_0\": 8595.409677258867,\n    \"key_1\": 9350\n  }\n}"
+									"body": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"api\",\n  \"parameters\": [\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    },\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    }\n  ],\n  \"function_name\": \"string\",\n  \"module_path\": \"string\",\n  \"api_endpoint\": null,\n  \"api_method\": null,\n  \"api_headers\": {\n    \"key_0\": \"string\"\n  },\n  \"python_code\": \"string\",\n  \"metadata\": {\n    \"key_0\": 8595.409677258867\n  }\n}"
 								},
 								{
 									"id": "cece5b56-1ee8-4c8a-aeec-f74537706982",
@@ -678,7 +674,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"api\",\n  \"parameters\": [\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    },\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    }\n  ],\n  \"function_name\": \"string\",\n  \"module_path\": \"string\",\n  \"api_endpoint\": null,\n  \"api_method\": null,\n  \"api_headers\": {\n    \"key_0\": \"string\"\n  },\n  \"python_code\": \"string\",\n  \"metadata\": {\n    \"key_0\": 8595.409677258867,\n    \"key_1\": 9350\n  }\n}",
+											"raw": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"api\",\n  \"parameters\": [\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    },\n    {\n      \"anyOf\": [\n        {},\n        {\n          \"type\": \"null\"\n        }\n      ],\n      \"title\": \"Default\"\n    }\n  ],\n  \"function_name\": \"string\",\n  \"module_path\": \"string\",\n  \"api_endpoint\": null,\n  \"api_method\": null,\n  \"api_headers\": {\n    \"key_0\": \"string\"\n  },\n  \"python_code\": \"string\",\n  \"metadata\": {\n    \"key_0\": 8595.409677258867\n  }\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -738,7 +734,6 @@
 											],
 											"variable": [
 												{
-													"id": "b6bda37e-568d-4e4d-9c9b-10f1f56cdac9",
 													"key": "agent_name",
 													"value": "string"
 												}
@@ -873,7 +868,6 @@
 											],
 											"variable": [
 												{
-													"id": "d38957af-81cc-4276-95bb-4118885fd98d",
 													"key": "agent_name",
 													"value": "string"
 												}
@@ -1022,7 +1016,6 @@
 											],
 											"variable": [
 												{
-													"id": "3d105af0-ad01-4719-95ad-bfc5533fe2ce",
 													"key": "agent_name",
 													"value": "string"
 												}
@@ -1272,6 +1265,573 @@
 						}
 					],
 					"id": "b64ea95e-edf0-4bb7-a97c-3ffbdd895ff2"
+				},
+				{
+					"name": "graphs",
+					"item": [
+						{
+							"name": "{graph_id}",
+							"item": [
+								{
+									"name": "Get Graph",
+									"id": "9225037b-5169-4f09-9062-29827e4b1c56",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/admin/graphs/:graph_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"admin",
+												"graphs",
+												":graph_id"
+											],
+											"variable": [
+												{
+													"id": "6bd6bab6-dc48-433f-8e56-379dc775c494",
+													"key": "graph_id",
+													"value": "string"
+												}
+											]
+										},
+										"description": "Get a specific graph configuration."
+									},
+									"response": [
+										{
+											"id": "8c3555b3-ec2e-4602-8040-3dc1b46bf2d9",
+											"name": "Successful Response",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/admin/graphs/:graph_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"admin",
+														"graphs",
+														":graph_id"
+													],
+													"variable": [
+														{
+															"key": "graph_id",
+															"value": "string"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n  \"id\": \"string\",\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"langgraph\",\n  \"nodes\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"agent\",\n      \"agent_id\": \"string\",\n      \"tool_id\": null,\n      \"input_mapping\": {\n        \"key_0\": 9748.13903277634\n      },\n      \"output_mapping\": {\n        \"key_0\": 3899,\n        \"key_1\": true\n      },\n      \"config\": {\n        \"key_0\": \"string\",\n        \"key_1\": 8049\n      },\n      \"routes\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"metadata\": {\n        \"key_0\": 264\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"start\",\n      \"agent_id\": \"string\",\n      \"tool_id\": null,\n      \"input_mapping\": {\n        \"key_0\": true,\n        \"key_1\": \"string\",\n        \"key_2\": false\n      },\n      \"output_mapping\": {\n        \"key_0\": false\n      },\n      \"config\": {\n        \"key_0\": 2038,\n        \"key_1\": 2728.1303001251445,\n        \"key_2\": 4800,\n        \"key_3\": 567.4864993868379\n      },\n      \"routes\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"metadata\": {\n        \"key_0\": 8206,\n        \"key_1\": 3974\n      }\n    }\n  ],\n  \"edges\": [\n    {\n      \"id\": \"string\",\n      \"source\": \"string\",\n      \"target\": \"string\",\n      \"type\": \"normal\",\n      \"condition\": \"string\",\n      \"condition_value\": null,\n      \"metadata\": {\n        \"key_0\": false,\n        \"key_1\": 6963.187400319979,\n        \"key_2\": 9089.166200282583,\n        \"key_3\": 5079\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"source\": \"string\",\n      \"target\": \"string\",\n      \"type\": \"normal\",\n      \"condition\": \"string\",\n      \"condition_value\": \"\",\n      \"metadata\": {\n        \"key_0\": 6106.187867070938\n      }\n    }\n  ],\n  \"entry_point\": \"string\",\n  \"max_iterations\": 25,\n  \"timeout\": 300,\n  \"streaming\": true,\n  \"agents\": [\n    \"string\",\n    \"string\"\n  ],\n  \"tools\": [\n    \"string\",\n    \"string\"\n  ],\n  \"metadata\": {\n    \"key_0\": 6445\n  }\n}"
+										},
+										{
+											"id": "e87278b9-0352-47bb-9a32-cf29ceb43143",
+											"name": "Validation Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/admin/graphs/:graph_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"admin",
+														"graphs",
+														":graph_id"
+													],
+													"variable": [
+														{
+															"key": "graph_id",
+															"value": "string"
+														}
+													]
+												}
+											},
+											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+											"code": 422,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        1735,\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        2285,\n        3002\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}"
+										}
+									]
+								},
+								{
+									"name": "Update Graph",
+									"id": "5779cce1-9335-414c-a7b6-070b1a96ec39",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"string\",\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"langgraph\",\n  \"nodes\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"agent\",\n      \"agent_id\": \"string\",\n      \"tool_id\": null,\n      \"input_mapping\": {\n        \"key_0\": 9748.13903277634\n      },\n      \"output_mapping\": {\n        \"key_0\": 3899,\n        \"key_1\": true\n      },\n      \"config\": {\n        \"key_0\": \"string\",\n        \"key_1\": 8049\n      },\n      \"routes\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"metadata\": {\n        \"key_0\": 264\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"start\",\n      \"agent_id\": \"string\",\n      \"tool_id\": null,\n      \"input_mapping\": {\n        \"key_0\": true,\n        \"key_1\": \"string\",\n        \"key_2\": false\n      },\n      \"output_mapping\": {\n        \"key_0\": false\n      },\n      \"config\": {\n        \"key_0\": 2038,\n        \"key_1\": 2728.1303001251445,\n        \"key_2\": 4800,\n        \"key_3\": 567.4864993868379\n      },\n      \"routes\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"metadata\": {\n        \"key_0\": 8206,\n        \"key_1\": 3974\n      }\n    }\n  ],\n  \"edges\": [\n    {\n      \"id\": \"string\",\n      \"source\": \"string\",\n      \"target\": \"string\",\n      \"type\": \"normal\",\n      \"condition\": \"string\",\n      \"condition_value\": null,\n      \"metadata\": {\n        \"key_0\": false,\n        \"key_1\": 6963.187400319979,\n        \"key_2\": 9089.166200282583,\n        \"key_3\": 5079\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"source\": \"string\",\n      \"target\": \"string\",\n      \"type\": \"normal\",\n      \"condition\": \"string\",\n      \"condition_value\": \"\",\n      \"metadata\": {\n        \"key_0\": 6106.187867070938\n      }\n    }\n  ],\n  \"entry_point\": \"string\",\n  \"max_iterations\": 25,\n  \"timeout\": 300,\n  \"streaming\": true,\n  \"agents\": [\n    \"string\",\n    \"string\"\n  ],\n  \"tools\": [\n    \"string\",\n    \"string\"\n  ],\n  \"metadata\": {\n    \"key_0\": 6445\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/admin/graphs/:graph_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"admin",
+												"graphs",
+												":graph_id"
+											],
+											"variable": [
+												{
+													"id": "faf55516-7734-49af-b5f0-60e29f6c4464",
+													"key": "graph_id",
+													"value": "string"
+												}
+											]
+										},
+										"description": "Update an existing graph."
+									},
+									"response": [
+										{
+											"id": "a67a1348-e4dd-4063-b328-9f3ba058811b",
+											"name": "Successful Response",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"id\": \"string\",\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"langgraph\",\n  \"nodes\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"agent\",\n      \"agent_id\": \"string\",\n      \"tool_id\": null,\n      \"input_mapping\": {\n        \"key_0\": 9748.13903277634\n      },\n      \"output_mapping\": {\n        \"key_0\": 3899,\n        \"key_1\": true\n      },\n      \"config\": {\n        \"key_0\": \"string\",\n        \"key_1\": 8049\n      },\n      \"routes\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"metadata\": {\n        \"key_0\": 264\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"start\",\n      \"agent_id\": \"string\",\n      \"tool_id\": null,\n      \"input_mapping\": {\n        \"key_0\": true,\n        \"key_1\": \"string\",\n        \"key_2\": false\n      },\n      \"output_mapping\": {\n        \"key_0\": false\n      },\n      \"config\": {\n        \"key_0\": 2038,\n        \"key_1\": 2728.1303001251445,\n        \"key_2\": 4800,\n        \"key_3\": 567.4864993868379\n      },\n      \"routes\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"metadata\": {\n        \"key_0\": 8206,\n        \"key_1\": 3974\n      }\n    }\n  ],\n  \"edges\": [\n    {\n      \"id\": \"string\",\n      \"source\": \"string\",\n      \"target\": \"string\",\n      \"type\": \"normal\",\n      \"condition\": \"string\",\n      \"condition_value\": null,\n      \"metadata\": {\n        \"key_0\": false,\n        \"key_1\": 6963.187400319979,\n        \"key_2\": 9089.166200282583,\n        \"key_3\": 5079\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"source\": \"string\",\n      \"target\": \"string\",\n      \"type\": \"normal\",\n      \"condition\": \"string\",\n      \"condition_value\": \"\",\n      \"metadata\": {\n        \"key_0\": 6106.187867070938\n      }\n    }\n  ],\n  \"entry_point\": \"string\",\n  \"max_iterations\": 25,\n  \"timeout\": 300,\n  \"streaming\": true,\n  \"agents\": [\n    \"string\",\n    \"string\"\n  ],\n  \"tools\": [\n    \"string\",\n    \"string\"\n  ],\n  \"metadata\": {\n    \"key_0\": 6445\n  }\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/admin/graphs/:graph_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"admin",
+														"graphs",
+														":graph_id"
+													],
+													"variable": [
+														{
+															"key": "graph_id",
+															"value": "string"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n  \"id\": \"string\",\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"langgraph\",\n  \"nodes\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"agent\",\n      \"agent_id\": \"string\",\n      \"tool_id\": null,\n      \"input_mapping\": {\n        \"key_0\": 9748.13903277634\n      },\n      \"output_mapping\": {\n        \"key_0\": 3899,\n        \"key_1\": true\n      },\n      \"config\": {\n        \"key_0\": \"string\",\n        \"key_1\": 8049\n      },\n      \"routes\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"metadata\": {\n        \"key_0\": 264\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"start\",\n      \"agent_id\": \"string\",\n      \"tool_id\": null,\n      \"input_mapping\": {\n        \"key_0\": true,\n        \"key_1\": \"string\",\n        \"key_2\": false\n      },\n      \"output_mapping\": {\n        \"key_0\": false\n      },\n      \"config\": {\n        \"key_0\": 2038,\n        \"key_1\": 2728.1303001251445,\n        \"key_2\": 4800,\n        \"key_3\": 567.4864993868379\n      },\n      \"routes\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"metadata\": {\n        \"key_0\": 8206,\n        \"key_1\": 3974\n      }\n    }\n  ],\n  \"edges\": [\n    {\n      \"id\": \"string\",\n      \"source\": \"string\",\n      \"target\": \"string\",\n      \"type\": \"normal\",\n      \"condition\": \"string\",\n      \"condition_value\": null,\n      \"metadata\": {\n        \"key_0\": false,\n        \"key_1\": 6963.187400319979,\n        \"key_2\": 9089.166200282583,\n        \"key_3\": 5079\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"source\": \"string\",\n      \"target\": \"string\",\n      \"type\": \"normal\",\n      \"condition\": \"string\",\n      \"condition_value\": \"\",\n      \"metadata\": {\n        \"key_0\": 6106.187867070938\n      }\n    }\n  ],\n  \"entry_point\": \"string\",\n  \"max_iterations\": 25,\n  \"timeout\": 300,\n  \"streaming\": true,\n  \"agents\": [\n    \"string\",\n    \"string\"\n  ],\n  \"tools\": [\n    \"string\",\n    \"string\"\n  ],\n  \"metadata\": {\n    \"key_0\": 6445\n  }\n}"
+										},
+										{
+											"id": "013229f2-2f00-4a14-80a6-785b433b0216",
+											"name": "Validation Error",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"id\": \"string\",\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"langgraph\",\n  \"nodes\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"agent\",\n      \"agent_id\": \"string\",\n      \"tool_id\": null,\n      \"input_mapping\": {\n        \"key_0\": 9748.13903277634\n      },\n      \"output_mapping\": {\n        \"key_0\": 3899,\n        \"key_1\": true\n      },\n      \"config\": {\n        \"key_0\": \"string\",\n        \"key_1\": 8049\n      },\n      \"routes\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"metadata\": {\n        \"key_0\": 264\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"start\",\n      \"agent_id\": \"string\",\n      \"tool_id\": null,\n      \"input_mapping\": {\n        \"key_0\": true,\n        \"key_1\": \"string\",\n        \"key_2\": false\n      },\n      \"output_mapping\": {\n        \"key_0\": false\n      },\n      \"config\": {\n        \"key_0\": 2038,\n        \"key_1\": 2728.1303001251445,\n        \"key_2\": 4800,\n        \"key_3\": 567.4864993868379\n      },\n      \"routes\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"metadata\": {\n        \"key_0\": 8206,\n        \"key_1\": 3974\n      }\n    }\n  ],\n  \"edges\": [\n    {\n      \"id\": \"string\",\n      \"source\": \"string\",\n      \"target\": \"string\",\n      \"type\": \"normal\",\n      \"condition\": \"string\",\n      \"condition_value\": null,\n      \"metadata\": {\n        \"key_0\": false,\n        \"key_1\": 6963.187400319979,\n        \"key_2\": 9089.166200282583,\n        \"key_3\": 5079\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"source\": \"string\",\n      \"target\": \"string\",\n      \"type\": \"normal\",\n      \"condition\": \"string\",\n      \"condition_value\": \"\",\n      \"metadata\": {\n        \"key_0\": 6106.187867070938\n      }\n    }\n  ],\n  \"entry_point\": \"string\",\n  \"max_iterations\": 25,\n  \"timeout\": 300,\n  \"streaming\": true,\n  \"agents\": [\n    \"string\",\n    \"string\"\n  ],\n  \"tools\": [\n    \"string\",\n    \"string\"\n  ],\n  \"metadata\": {\n    \"key_0\": 6445\n  }\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/admin/graphs/:graph_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"admin",
+														"graphs",
+														":graph_id"
+													],
+													"variable": [
+														{
+															"key": "graph_id",
+															"value": "string"
+														}
+													]
+												}
+											},
+											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+											"code": 422,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        1735,\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        2285,\n        3002\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}"
+										}
+									]
+								},
+								{
+									"name": "Delete Graph",
+									"id": "bad04b6a-d087-4362-9a08-d27abc24a77d",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/admin/graphs/:graph_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"admin",
+												"graphs",
+												":graph_id"
+											],
+											"variable": [
+												{
+													"id": "7eb08c9c-7635-42ca-a64c-f38da065650b",
+													"key": "graph_id",
+													"value": "string"
+												}
+											]
+										},
+										"description": "Delete a graph."
+									},
+									"response": [
+										{
+											"id": "6c09958d-d7ee-4d8e-a683-bf99e4967231",
+											"name": "Successful Response",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/admin/graphs/:graph_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"admin",
+														"graphs",
+														":graph_id"
+													],
+													"variable": [
+														{
+															"key": "graph_id",
+															"value": "string"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"responseTime": null,
+											"body": null
+										},
+										{
+											"id": "4550eb03-e870-4459-9a46-63db50b465ed",
+											"name": "Validation Error",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/admin/graphs/:graph_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"admin",
+														"graphs",
+														":graph_id"
+													],
+													"variable": [
+														{
+															"key": "graph_id",
+															"value": "string"
+														}
+													]
+												}
+											},
+											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+											"code": 422,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        1735,\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        2285,\n        3002\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}"
+										}
+									]
+								}
+							],
+							"id": "28488f67-f472-43f7-bd93-26b84b0db840"
+						},
+						{
+							"name": "List Graphs",
+							"id": "611b181d-71c7-4176-8b2f-25be8369876c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": "{{baseUrl}}/admin/graphs",
+								"description": "List all available graphs."
+							},
+							"response": [
+								{
+									"id": "deb48992-35fe-41c0-9f61-f29468fabf3c",
+									"name": "Successful Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": "{{baseUrl}}/admin/graphs"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "[\n  \"string\",\n  \"string\"\n]"
+								}
+							]
+						},
+						{
+							"name": "Create Graph",
+							"id": "021e430c-7a3d-4193-93e7-741cd7581508",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"string\",\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"langgraph\",\n  \"nodes\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"agent\",\n      \"agent_id\": \"string\",\n      \"tool_id\": null,\n      \"input_mapping\": {\n        \"key_0\": 9748.13903277634\n      },\n      \"output_mapping\": {\n        \"key_0\": 3899,\n        \"key_1\": true\n      },\n      \"config\": {\n        \"key_0\": \"string\",\n        \"key_1\": 8049\n      },\n      \"routes\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"metadata\": {\n        \"key_0\": 264\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"start\",\n      \"agent_id\": \"string\",\n      \"tool_id\": null,\n      \"input_mapping\": {\n        \"key_0\": true,\n        \"key_1\": \"string\",\n        \"key_2\": false\n      },\n      \"output_mapping\": {\n        \"key_0\": false\n      },\n      \"config\": {\n        \"key_0\": 2038,\n        \"key_1\": 2728.1303001251445,\n        \"key_2\": 4800,\n        \"key_3\": 567.4864993868379\n      },\n      \"routes\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"metadata\": {\n        \"key_0\": 8206,\n        \"key_1\": 3974\n      }\n    }\n  ],\n  \"edges\": [\n    {\n      \"id\": \"string\",\n      \"source\": \"string\",\n      \"target\": \"string\",\n      \"type\": \"normal\",\n      \"condition\": \"string\",\n      \"condition_value\": null,\n      \"metadata\": {\n        \"key_0\": false,\n        \"key_1\": 6963.187400319979,\n        \"key_2\": 9089.166200282583,\n        \"key_3\": 5079\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"source\": \"string\",\n      \"target\": \"string\",\n      \"type\": \"normal\",\n      \"condition\": \"string\",\n      \"condition_value\": \"\",\n      \"metadata\": {\n        \"key_0\": 6106.187867070938\n      }\n    }\n  ],\n  \"entry_point\": \"string\",\n  \"max_iterations\": 25,\n  \"timeout\": 300,\n  \"streaming\": true,\n  \"agents\": [\n    \"string\",\n    \"string\"\n  ],\n  \"tools\": [\n    \"string\",\n    \"string\"\n  ],\n  \"metadata\": {\n    \"key_0\": 6445\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/admin/graphs",
+								"description": "Create a new graph."
+							},
+							"response": [
+								{
+									"id": "a4998960-2ef3-4b60-a0f5-2f613f8f80a2",
+									"name": "Successful Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"string\",\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"langgraph\",\n  \"nodes\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"agent\",\n      \"agent_id\": \"string\",\n      \"tool_id\": null,\n      \"input_mapping\": {\n        \"key_0\": 9748.13903277634\n      },\n      \"output_mapping\": {\n        \"key_0\": 3899,\n        \"key_1\": true\n      },\n      \"config\": {\n        \"key_0\": \"string\",\n        \"key_1\": 8049\n      },\n      \"routes\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"metadata\": {\n        \"key_0\": 264\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"start\",\n      \"agent_id\": \"string\",\n      \"tool_id\": null,\n      \"input_mapping\": {\n        \"key_0\": true,\n        \"key_1\": \"string\",\n        \"key_2\": false\n      },\n      \"output_mapping\": {\n        \"key_0\": false\n      },\n      \"config\": {\n        \"key_0\": 2038,\n        \"key_1\": 2728.1303001251445,\n        \"key_2\": 4800,\n        \"key_3\": 567.4864993868379\n      },\n      \"routes\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"metadata\": {\n        \"key_0\": 8206,\n        \"key_1\": 3974\n      }\n    }\n  ],\n  \"edges\": [\n    {\n      \"id\": \"string\",\n      \"source\": \"string\",\n      \"target\": \"string\",\n      \"type\": \"normal\",\n      \"condition\": \"string\",\n      \"condition_value\": null,\n      \"metadata\": {\n        \"key_0\": false,\n        \"key_1\": 6963.187400319979,\n        \"key_2\": 9089.166200282583,\n        \"key_3\": 5079\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"source\": \"string\",\n      \"target\": \"string\",\n      \"type\": \"normal\",\n      \"condition\": \"string\",\n      \"condition_value\": \"\",\n      \"metadata\": {\n        \"key_0\": 6106.187867070938\n      }\n    }\n  ],\n  \"entry_point\": \"string\",\n  \"max_iterations\": 25,\n  \"timeout\": 300,\n  \"streaming\": true,\n  \"agents\": [\n    \"string\",\n    \"string\"\n  ],\n  \"tools\": [\n    \"string\",\n    \"string\"\n  ],\n  \"metadata\": {\n    \"key_0\": 6445\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/admin/graphs"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"id\": \"string\",\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"langgraph\",\n  \"nodes\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"agent\",\n      \"agent_id\": \"string\",\n      \"tool_id\": null,\n      \"input_mapping\": {\n        \"key_0\": 9748.13903277634\n      },\n      \"output_mapping\": {\n        \"key_0\": 3899,\n        \"key_1\": true\n      },\n      \"config\": {\n        \"key_0\": \"string\",\n        \"key_1\": 8049\n      },\n      \"routes\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"metadata\": {\n        \"key_0\": 264\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"start\",\n      \"agent_id\": \"string\",\n      \"tool_id\": null,\n      \"input_mapping\": {\n        \"key_0\": true,\n        \"key_1\": \"string\",\n        \"key_2\": false\n      },\n      \"output_mapping\": {\n        \"key_0\": false\n      },\n      \"config\": {\n        \"key_0\": 2038,\n        \"key_1\": 2728.1303001251445,\n        \"key_2\": 4800,\n        \"key_3\": 567.4864993868379\n      },\n      \"routes\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"metadata\": {\n        \"key_0\": 8206,\n        \"key_1\": 3974\n      }\n    }\n  ],\n  \"edges\": [\n    {\n      \"id\": \"string\",\n      \"source\": \"string\",\n      \"target\": \"string\",\n      \"type\": \"normal\",\n      \"condition\": \"string\",\n      \"condition_value\": null,\n      \"metadata\": {\n        \"key_0\": false,\n        \"key_1\": 6963.187400319979,\n        \"key_2\": 9089.166200282583,\n        \"key_3\": 5079\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"source\": \"string\",\n      \"target\": \"string\",\n      \"type\": \"normal\",\n      \"condition\": \"string\",\n      \"condition_value\": \"\",\n      \"metadata\": {\n        \"key_0\": 6106.187867070938\n      }\n    }\n  ],\n  \"entry_point\": \"string\",\n  \"max_iterations\": 25,\n  \"timeout\": 300,\n  \"streaming\": true,\n  \"agents\": [\n    \"string\",\n    \"string\"\n  ],\n  \"tools\": [\n    \"string\",\n    \"string\"\n  ],\n  \"metadata\": {\n    \"key_0\": 6445\n  }\n}"
+								},
+								{
+									"id": "dbe15057-145d-4f51-a62d-f22fefa41639",
+									"name": "Validation Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": \"string\",\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"type\": \"langgraph\",\n  \"nodes\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"agent\",\n      \"agent_id\": \"string\",\n      \"tool_id\": null,\n      \"input_mapping\": {\n        \"key_0\": 9748.13903277634\n      },\n      \"output_mapping\": {\n        \"key_0\": 3899,\n        \"key_1\": true\n      },\n      \"config\": {\n        \"key_0\": \"string\",\n        \"key_1\": 8049\n      },\n      \"routes\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"metadata\": {\n        \"key_0\": 264\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"type\": \"start\",\n      \"agent_id\": \"string\",\n      \"tool_id\": null,\n      \"input_mapping\": {\n        \"key_0\": true,\n        \"key_1\": \"string\",\n        \"key_2\": false\n      },\n      \"output_mapping\": {\n        \"key_0\": false\n      },\n      \"config\": {\n        \"key_0\": 2038,\n        \"key_1\": 2728.1303001251445,\n        \"key_2\": 4800,\n        \"key_3\": 567.4864993868379\n      },\n      \"routes\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"metadata\": {\n        \"key_0\": 8206,\n        \"key_1\": 3974\n      }\n    }\n  ],\n  \"edges\": [\n    {\n      \"id\": \"string\",\n      \"source\": \"string\",\n      \"target\": \"string\",\n      \"type\": \"normal\",\n      \"condition\": \"string\",\n      \"condition_value\": null,\n      \"metadata\": {\n        \"key_0\": false,\n        \"key_1\": 6963.187400319979,\n        \"key_2\": 9089.166200282583,\n        \"key_3\": 5079\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"source\": \"string\",\n      \"target\": \"string\",\n      \"type\": \"normal\",\n      \"condition\": \"string\",\n      \"condition_value\": \"\",\n      \"metadata\": {\n        \"key_0\": 6106.187867070938\n      }\n    }\n  ],\n  \"entry_point\": \"string\",\n  \"max_iterations\": 25,\n  \"timeout\": 300,\n  \"streaming\": true,\n  \"agents\": [\n    \"string\",\n    \"string\"\n  ],\n  \"tools\": [\n    \"string\",\n    \"string\"\n  ],\n  \"metadata\": {\n    \"key_0\": 6445\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/admin/graphs"
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        1735,\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        2285,\n        3002\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}"
+								}
+							]
+						}
+					],
+					"id": "cf73fbae-e9de-4c16-b403-f5b57184dc49"
 				}
 			],
 			"id": "7de3f290-7b1f-4119-9707-bf54a2e08e15"
@@ -1302,7 +1862,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"tool_name\": \"string\",\n  \"parameters\": {\n    \"key_0\": 7824\n  }\n}",
+									"raw": "{\n  \"tool_name\": \"string\",\n  \"parameters\": {\n    \"key_0\": 7824,\n    \"key_1\": 8031,\n    \"key_2\": \"string\"\n  }\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1331,7 +1891,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"tool_name\": \"string\",\n  \"parameters\": {\n    \"key_0\": 7824\n  }\n}",
+											"raw": "{\n  \"tool_name\": \"string\",\n  \"parameters\": {\n    \"key_0\": 7824,\n    \"key_1\": 8031,\n    \"key_2\": \"string\"\n  }\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -1371,7 +1931,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"tool_name\": \"string\",\n  \"parameters\": {\n    \"key_0\": 7824\n  }\n}",
+											"raw": "{\n  \"tool_name\": \"string\",\n  \"parameters\": {\n    \"key_0\": 7824,\n    \"key_1\": 8031,\n    \"key_2\": \"string\"\n  }\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -1422,7 +1982,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"agent_name\": \"string\",\n  \"input\": \"string\",\n  \"context\": {\n    \"key_0\": 8969\n  },\n  \"stream\": false\n}",
+									"raw": "{\n  \"agent_name\": \"string\",\n  \"input\": \"string\",\n  \"context\": {\n    \"key_0\": 8969,\n    \"key_1\": false\n  },\n  \"stream\": false\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1451,7 +2011,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"agent_name\": \"string\",\n  \"input\": \"string\",\n  \"context\": {\n    \"key_0\": 8969\n  },\n  \"stream\": false\n}",
+											"raw": "{\n  \"agent_name\": \"string\",\n  \"input\": \"string\",\n  \"context\": {\n    \"key_0\": 8969,\n    \"key_1\": false\n  },\n  \"stream\": false\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -1491,7 +2051,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"agent_name\": \"string\",\n  \"input\": \"string\",\n  \"context\": {\n    \"key_0\": 8969\n  },\n  \"stream\": false\n}",
+											"raw": "{\n  \"agent_name\": \"string\",\n  \"input\": \"string\",\n  \"context\": {\n    \"key_0\": 8969,\n    \"key_1\": false\n  },\n  \"stream\": false\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -1518,6 +2078,126 @@
 						}
 					],
 					"id": "c7fa984a-5beb-4e2f-be7a-173b300cc5cb"
+				},
+				{
+					"name": "graph",
+					"item": [
+						{
+							"name": "Execute Graph",
+							"id": "6fa02e7f-8ad2-4d22-a173-65d6c44de0ba",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"graph_id\": \"string\",\n  \"input\": {\n    \"key_0\": \"string\",\n    \"key_1\": 5224.281970664615,\n    \"key_2\": \"string\"\n  },\n  \"context\": {\n    \"key_0\": \"string\",\n    \"key_1\": \"string\",\n    \"key_2\": 5205,\n    \"key_3\": \"string\"\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/execute/graph",
+								"description": "Execute a graph with given input."
+							},
+							"response": [
+								{
+									"id": "7703aa4f-38a5-4b48-a4a0-a17e87a21f7a",
+									"name": "Successful Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"graph_id\": \"string\",\n  \"input\": {\n    \"key_0\": \"string\",\n    \"key_1\": 5224.281970664615,\n    \"key_2\": \"string\"\n  },\n  \"context\": {\n    \"key_0\": \"string\",\n    \"key_1\": \"string\",\n    \"key_2\": 5205,\n    \"key_3\": \"string\"\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/execute/graph"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"graph_id\": \"string\",\n  \"success\": true,\n  \"execution_time\": 429.58420821268993,\n  \"output\": {\n    \"key_0\": 8464,\n    \"key_1\": 4708.73510609872\n  },\n  \"steps\": [\n    {\n      \"key_0\": 7363.182713287424,\n      \"key_1\": 8528.43543838142,\n      \"key_2\": false,\n      \"key_3\": 2094.4118559057156\n    },\n    {\n      \"key_0\": 8816,\n      \"key_1\": true\n    }\n  ],\n  \"error\": \"string\"\n}"
+								},
+								{
+									"id": "901109c9-4eab-4d21-84c9-372fe86d1e91",
+									"name": "Validation Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"graph_id\": \"string\",\n  \"input\": {\n    \"key_0\": \"string\",\n    \"key_1\": 5224.281970664615,\n    \"key_2\": \"string\"\n  },\n  \"context\": {\n    \"key_0\": \"string\",\n    \"key_1\": \"string\",\n    \"key_2\": 5205,\n    \"key_3\": \"string\"\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/execute/graph"
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        1735,\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        2285,\n        3002\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}"
+								}
+							]
+						}
+					],
+					"id": "d075c898-e93d-415d-ace6-b231c597fe41"
 				}
 			],
 			"id": "7c14edb6-8543-4244-b7f6-18e68ac30c90"
@@ -1630,7 +2310,8 @@
 	"variable": [
 		{
 			"key": "baseUrl",
-			"value": "/"
+			"value": "/",
+			"type": "any"
 		}
 	]
 }
