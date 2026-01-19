@@ -870,7 +870,20 @@
 		},
 		{
 			"name": "graphs",
-			"item": [],
+			"item": [
+				{
+					"name": "New Request",
+					"id": "8c2848a5-30a3-431a-b2a1-d50c34ab3773",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
 			"id": "e03b0757-0d58-462b-a2c1-aaf7773e90a1"
 		}
 	]
