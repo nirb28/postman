@@ -629,7 +629,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"agent_name\": \"check_fraud_analyst\",\r\n  \"input\": \"\",\r\n  \"context\": {}\r\n}",
+							"raw": "{\r\n  \"agent_name\": \"check_fraud_analyst\",\r\n  \"input\": \"Analyze this check image.\\n\\n image_url: https://raw.githubusercontent.com/nirb28/dsp-adk2/refs/heads/main/examples/check_fraud/images/sample_fraud_check.jpg\\n model: meta/llama-3.2-90b-vision-instruct\",\r\n  \"context\": {}\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
