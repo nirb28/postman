@@ -617,6 +617,28 @@
 						"url": "{{adk2-baseUrl}}/execute/agent"
 					},
 					"response": []
+				},
+				{
+					"name": "check_fraud_analyst",
+					"id": "d7678cb5-e48b-4ccd-a00c-e9102b154e17",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"agent_name\": \"check_fraud_analyst\",\r\n  \"input\": \"\",\r\n  \"context\": {}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{adk2-baseUrl}}/execute/agent"
+					},
+					"response": []
 				}
 			],
 			"id": "b232ef03-56e5-4883-834e-7737f98ffe95"
