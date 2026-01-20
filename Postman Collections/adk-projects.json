@@ -563,7 +563,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"agent_name\": \"simple_assistant\",\r\n  \"input\": \"Calculate the length of the text 'Hello World' and then multiply it by 5\",\r\n  \"context\": {},\r\n  \"llm_override\": {\r\n    \"provider\": \"openai\",\r\n    \"model\": \"gpt-4o-mini\",\r\n    \"base_url\": \"\",\r\n    \"\": \"\",\r\n    \"temperature\": 0.2,\r\n    \"max_tokens\": 800,\r\n    \"additional_params\": {\r\n      \"top_p\": 0.9\r\n    }\r\n  }  \r\n}\r\n",
+							"raw": "{\r\n  \"agent_name\": \"simple_assistant\",\r\n  \"input\": \"Calculate the length of the text 'Hello World' and then multiply it by 5\",\r\n  \"context\": {},\r\n  \"llm_override\": {\r\n    \"provider\": \"openai\",\r\n    \"model\": \"gpt-4.1-nano\",\r\n    \"base_url\": \"${AZURE_OPENAI_BASE_URL}\",\r\n    \"api_key\": \"${AZURE_OPENAI_API_KEY}\",\r\n    \"temperature\": 0.2,\r\n    \"max_tokens\": 800,\r\n    \"additional_params\": {\r\n      \"top_p\": 0.9\r\n    }\r\n  }  \r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -878,7 +878,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"graph_id\": \"research_summarize\",\r\n  \"input\": {\r\n    \"topic\": \"Impact of retrieval augmented generation\"\r\n  },\r\n  \"context\": {}\r\n}",
+									"raw": "{\r\n  \"graph_id\": \"research_summarize\",\r\n  \"input\": {\r\n    \"topic\": \"Impact of retrieval augmented generation\"\r\n  },\r\n  \"context\": {},\r\n  \"llm_override\": {\r\n    \"provider\": \"openai\",\r\n    \"model\": \"gpt-4.1-nano\",\r\n    \"base_url\": \"https://dalje-mk60vkf4-eastus2.openai.azure.com/openai/v1\",\r\n    \"api_key\": \"${AZURE_OPENAI_API_KEY}\",\r\n    \"temperature\": 0.2,\r\n    \"max_tokens\": 800,\r\n    \"additional_params\": {\r\n      \"top_p\": 0.9\r\n    }\r\n  }    \r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -901,7 +901,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"graph_id\": \"tool_payload_demo\",\r\n  \"input\": {\r\n    \"expression\": \"21 * 2\"\r\n  },\r\n  \"context\": {}\r\n}",
+									"raw": "{\r\n  \"graph_id\": \"tool_payload_demo\",\r\n  \"input\": {\r\n    \"expression\": \"21 * 2\"\r\n  }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
