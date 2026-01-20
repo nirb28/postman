@@ -639,6 +639,28 @@
 						"url": "{{adk2-baseUrl}}/execute/agent"
 					},
 					"response": []
+				},
+				{
+					"name": "visualization",
+					"id": "06988e96-cbf8-4e91-84e3-89a6a6540abe",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"agent_name\": \"check_fraud_analyst\",\r\n  \"input\": \"Create a bar chart showing total revenue by customer for Q1 2024.\r\n\r\ndb_path: d:\\ds\\work\\workspace\\git\\dsp-adk2\\examples\\text_to_sql\\sample.db\r\ndialect: sqlite\r\ncontext: Q1 2024 revenue by customer\r\n\r\nschema:\r\nTABLE customers (\r\n        id INTEGER PRIMARY KEY,\r\n        name TEXT,\r\n        segment TEXT\r\n    )\r\n\r\n    TABLE orders (\r\n        id INTEGER PRIMARY KEY,\r\n        customer_id INTEGER,\r\n        order_total REAL,\r\n        order_date TEXT,\r\n        FOREIGN KEY (customer_id) REFERENCES customers(id)\r\n    )\r\n\r\nsample_queries:\r\n-- Total revenue by customer\r\n-- Total revenue by customer\r\n-- Total revenue by customer\r\n    SELECT c.name, SUM(o.order_total) AS total_revenue\r\n    FROM orders o\r\n    JOIN customers c ON o.customer_id = c.id\r\n    GROUP BY c.name\r\n    ORDER BY total_revenue DESC;\r\n\r\nsample_data:\r\ncustomers:\r\n    - (1, Acme Corp, enterprise)\r\n    - (2, Bluefield LLC, mid_market)\r\n    - (3, Cedar Retail, smb)\r\n\r\n    orders:\r\n    - (1, 1, 1200.0, 2024-01-05)\r\n    - (2, 1, 800.0, 2024-02-12)\r\n    - (3, 2, 450.0, 2024-02-20)\r\n    - (4, 3, 200.0, 2024-03-02)\r\n    - (5, 2, 620.0, 2024-03-14)\r\n\r\nChart should be a bar chart with customer name on x-axis and revenue on y-axis.\r\nQuestion: \",\r\n  \"context\": {}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{adk2-baseUrl}}/execute/agent"
+					},
+					"response": []
 				}
 			],
 			"id": "b232ef03-56e5-4883-834e-7737f98ffe95"
