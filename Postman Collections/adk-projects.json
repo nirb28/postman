@@ -895,7 +895,7 @@
 						},
 						{
 							"id": "06c091b0-8175-4348-9735-053b448b1f57",
-							"name": "tool_payload_demo",
+							"name": "tool_payload_demo (no llm)",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
