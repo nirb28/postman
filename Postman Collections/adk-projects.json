@@ -1025,7 +1025,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"agent_name\": \"claim_prompt_only_analyst\",\r\n  \"input\": \"\",\r\n  \"context\": {},\r\n  \"framework_override\": \"openai_direct\"\r\n}\r\n",
+							"raw": "{\r\n  \"agent_name\": \"claim_prompt_only_analyst\",\r\n  \"input\": \"Analyze this credit card dispute.\\r\\n\\r\\nclaim_record: {\\\"claim_id\\\": \\\"C003\\\", \\\"customer_name\\\": \\\"Olivia Brown\\\", \\\"card_last4\\\": \\\"1904\\\", \\\"merchant_name\\\": \\\"Bluebird Air\\\", \\\"transaction_date\\\": \\\"2026-01-16\\\", \\\"transaction_amount\\\": \\\"540.00\\\", \\\"currency\\\": \\\"USD\\\", \\\"reason_code\\\": \\\"duplicate_charge\\\", \\\"customer_statement\\\": \\\"Customer claims duplicate ticket billing.\\\"}\\r\\n\\r\\nmerchant_representation:\\r\\nMerchant Representation\\r\\nClaim ID: C003\\r\\nMerchant Name: Bluebird Air\\r\\nCardholder Name: Olivia Brown\\r\\nCard Last4: 1904\\r\\nTransaction Date: 2026-01-16\\r\\nTransaction Amount: $540.00\\r\\nCurrency: USD\\r\\nAVS Match: Yes\\r\\nCVV Match: Yes\\r\\n3DS Authenticated: Yes\\r\\nReceipt Signed: No\\r\\nService Delivered: Yes\\r\\nPrior Successful Transactions: 1\\r\\nRefund Issued: No\\r\\nDuplicate Processing: Yes\\r\\nNarrative: Merchant confirms booking engine submitted the charge twice during a retry event.\",\r\n  \"context\": {},\r\n  \"framework_override\": \"openai_direct\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
