@@ -1059,6 +1059,98 @@
 							"body": null
 						}
 					]
+				},
+				{
+					"name": "ag: tool",
+					"id": "f1658888-d8ef-4c77-b08a-1768b10d307c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"agent_name\": \"claim_tool_assisted_analyst\",\r\n  \"input\": \"Evaluate claim_id=C003 using your tools and return JSON summary.\",\r\n  \"context\": {}\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{adk2-baseUrl}}/execute/agent"
+					},
+					"response": [
+						{
+							"id": "6e87f1dc-bc6c-4612-9324-06b9584d2766",
+							"name": "with override",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"agent_name\": \"simple_assistant\",\r\n  \"input\": \"Calculate the length of the text 'Hello World' and then multiply it by 5\",\r\n  \"context\": {},\r\n  \"llm_override\": {\r\n    \"provider\": \"openai\",\r\n    \"model\": \"gpt-4.1-nano\",\r\n    \"base_url\": \"${AZURE_OPENAI_BASE_URL}\",\r\n    \"api_key\": \"${AZURE_OPENAI_API_KEY}\",\r\n    \"temperature\": 0.2,\r\n    \"max_tokens\": 800,\r\n    \"additional_params\": {\r\n      \"top_p\": 0.9\r\n    }\r\n  }  \r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{adk2-baseUrl}}/execute/agent"
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "ag: tool Copy",
+					"id": "702b11b5-a907-4787-966e-71970c309bbe",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"agent_name\": \"claim_tool_assisted_analyst\",\r\n  \"input\": \"Evaluate claim_id=C003 using your tools and return JSON summary.\",\r\n  \"context\": {}\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{adk2-baseUrl}}/execute/agent"
+					},
+					"response": [
+						{
+							"id": "9ae8103f-75f7-4c0b-9656-72239c350937",
+							"name": "with override",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"agent_name\": \"simple_assistant\",\r\n  \"input\": \"Calculate the length of the text 'Hello World' and then multiply it by 5\",\r\n  \"context\": {},\r\n  \"llm_override\": {\r\n    \"provider\": \"openai\",\r\n    \"model\": \"gpt-4.1-nano\",\r\n    \"base_url\": \"${AZURE_OPENAI_BASE_URL}\",\r\n    \"api_key\": \"${AZURE_OPENAI_API_KEY}\",\r\n    \"temperature\": 0.2,\r\n    \"max_tokens\": 800,\r\n    \"additional_params\": {\r\n      \"top_p\": 0.9\r\n    }\r\n  }  \r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{adk2-baseUrl}}/execute/agent"
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						}
+					]
 				}
 			],
 			"id": "7b505330-19fd-4df8-b596-cc2ef5300d18"
