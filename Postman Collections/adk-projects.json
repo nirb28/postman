@@ -1015,7 +1015,7 @@
 			"name": "claim processing",
 			"item": [
 				{
-					"name": "agent -",
+					"name": "ag: prompt",
 					"id": "d33db617-e17a-499d-802e-67575428250c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -1025,7 +1025,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"agent_name\": \"simple_assistant\",\r\n  \"input\": \"Calculate the length of the text 'Hello World' and then multiply it by 5\",\r\n  \"context\": {},\r\n  \"framework_override\": \"openai_direct\"\r\n}\r\n",
+							"raw": "{\r\n  \"agent_name\": \"claim_prompt_only_analyst\",\r\n  \"input\": \"Calculate the length of the text 'Hello World' and then multiply it by 5\",\r\n  \"context\": {},\r\n  \"framework_override\": \"openai_direct\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
