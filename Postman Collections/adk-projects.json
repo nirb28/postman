@@ -1107,7 +1107,7 @@
 					]
 				},
 				{
-					"name": "ag: tool Copy",
+					"name": "ag: langgraph",
 					"id": "702b11b5-a907-4787-966e-71970c309bbe",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -1117,7 +1117,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"agent_name\": \"claim_tool_assisted_analyst\",\r\n  \"input\": \"Evaluate claim_id=C003 using your tools and return JSON summary.\",\r\n  \"context\": {}\r\n}\r\n",
+							"raw": "{\r\n  \"agent_name\": \"claim_langgraph_analyst\",\r\n  \"input\": \"Process claim_id=C003 and provide final decision with rationale.\",\r\n  \"context\": {}\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1129,6 +1129,52 @@
 					"response": [
 						{
 							"id": "9ae8103f-75f7-4c0b-9656-72239c350937",
+							"name": "with override",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"agent_name\": \"simple_assistant\",\r\n  \"input\": \"Calculate the length of the text 'Hello World' and then multiply it by 5\",\r\n  \"context\": {},\r\n  \"llm_override\": {\r\n    \"provider\": \"openai\",\r\n    \"model\": \"gpt-4.1-nano\",\r\n    \"base_url\": \"${AZURE_OPENAI_BASE_URL}\",\r\n    \"api_key\": \"${AZURE_OPENAI_API_KEY}\",\r\n    \"temperature\": 0.2,\r\n    \"max_tokens\": 800,\r\n    \"additional_params\": {\r\n      \"top_p\": 0.9\r\n    }\r\n  }  \r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{adk2-baseUrl}}/execute/agent"
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "ag: flow w/ langgraph",
+					"id": "3c13b7b1-0cd3-4dfc-bc77-06523ab365e6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"agent_name\": \"claim_langgraph_analyst\",\r\n  \"input\": \"Process claim_id=C003 and provide final decision with rationale.\",\r\n  \"context\": {}\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{adk2-baseUrl}}/execute/agent"
+					},
+					"response": [
+						{
+							"id": "e3c83ffb-fd71-47ef-9a3f-104d99fefc29",
 							"name": "with override",
 							"originalRequest": {
 								"method": "POST",
