@@ -1163,14 +1163,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"agent_name\": \"claim_langgraph_analyst\",\r\n  \"input\": \"Process claim_id=C003 and provide final decision with rationale.\",\r\n  \"context\": {}\r\n}\r\n",
+							"raw": "{\r\n    \"graph_id\": \"claim-processing-flow\",\r\n    \"input\": {\"claim_id\": \"C003\"},\r\n    \"context\": {}\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{adk2-baseUrl}}/execute/agent"
+						"url": "{{adk2-baseUrl}}/execute/graph"
 					},
 					"response": [
 						{
