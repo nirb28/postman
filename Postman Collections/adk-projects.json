@@ -1215,7 +1215,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{'graph_id': 'starburst-ai-bi-chatbot', 'input': {'user_question': 'Show monthly revenue trend for the last 12 months by region and create a chart.', 'conversation_history': '', 'metadata_file': 'galaxy_retail_semantic.yaml', 'include_live_schema': False, 'catalog': None, 'schema': None, 'limit': 200, 'output_format': 'html'\r\n    }, 'context': {}\r\n}",
+							"raw": "{\r\n    \"graph_id\": \"starburst-ai-bi-chatbot\",\r\n    \"input\": {\r\n        \"user_question\": \"Show monthly revenue trend for the last 12 months by region and create a chart.\",\r\n        \"conversation_history\": \"\",\r\n        \"metadata_file\": \"galaxy_retail_semantic.yaml\",\r\n        \"include_live_schema\": false,\r\n        \"catalog\": \"sample\",\r\n        \"schema\": \"burstbank\",\r\n        \"limit\": 200,\r\n        \"output_format\": \"html\"\r\n    },\r\n    \"context\": {}\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
