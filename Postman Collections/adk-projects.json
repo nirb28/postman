@@ -1203,7 +1203,30 @@
 		},
 		{
 			"name": "Starburst",
-			"item": [],
+			"item": [
+				{
+					"name": "graph",
+					"id": "0261e6ad-beb0-4897-a827-a0ce93e40fe6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{'graph_id': 'starburst-ai-bi-chatbot', 'input': {'user_question': 'Show monthly revenue trend for the last 12 months by region and create a chart.', 'conversation_history': '', 'metadata_file': 'galaxy_retail_semantic.yaml', 'include_live_schema': False, 'catalog': None, 'schema': None, 'limit': 200, 'output_format': 'html'\r\n    }, 'context': {}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{adk2-baseUrl}}/execute/graph"
+					},
+					"response": []
+				}
+			],
 			"id": "2065a0fe-f924-4bc5-b3f2-4fb2ca9c1bb1"
 		}
 	]
