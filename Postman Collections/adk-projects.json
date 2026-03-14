@@ -1227,14 +1227,24 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "List Catalogs",
 					"id": "faa45077-9dc7-423e-9a4d-e34c07e7bcb5",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"tool_name\": \"sb_list_catalogs\",\r\n        \"parameters\": {}\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{adk2-baseUrl}}/execute/tool"
 					},
 					"response": []
 				}
