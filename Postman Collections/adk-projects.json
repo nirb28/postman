@@ -1225,6 +1225,18 @@
 						"url": "{{adk2-baseUrl}}/execute/graph"
 					},
 					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "faa45077-9dc7-423e-9a4d-e34c07e7bcb5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "2065a0fe-f924-4bc5-b3f2-4fb2ca9c1bb1"
