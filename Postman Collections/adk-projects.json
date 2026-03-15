@@ -1259,7 +1259,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n        \"tool_name\": \"sb_list_schemas\",\r\n        \"catalog\": \"sample1\",\r\n        \"parameters\": {}\r\n    }",
+							"raw": "{\r\n        \"tool_name\": \"sb_list_schemas\",\r\n        \"catalog\": \"galaxy_telemetry\",\r\n        \"parameters\": {}\r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
