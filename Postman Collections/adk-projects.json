@@ -1247,6 +1247,28 @@
 						"url": "{{adk2-baseUrl}}/execute/tool"
 					},
 					"response": []
+				},
+				{
+					"name": "List Schemas",
+					"id": "e42f876b-b27e-4261-a766-60711738e6d8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"tool_name\": \"sb_list_catalogs\",\r\n        \"parameters\": {}\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{adk2-baseUrl}}/execute/tool"
+					},
+					"response": []
 				}
 			],
 			"id": "2065a0fe-f924-4bc5-b3f2-4fb2ca9c1bb1"
