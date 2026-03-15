@@ -1259,7 +1259,29 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n        \"tool_name\": \"sb_list_schemas\",\r\n        \"catalog\": \"galaxy_telemetry\",\r\n        \"parameters\": {}\r\n    }",
+							"raw": "{\r\n        \"tool_name\": \"sb_list_schemas\",\r\n        \"catalog\": \"ds_covid\",\r\n        \"parameters\": {}\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{adk2-baseUrl}}/execute/tool"
+					},
+					"response": []
+				},
+				{
+					"name": "List Tables",
+					"id": "b76995d4-5d6f-463b-bc43-491c2deef72f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"tool_name\": \"sb_list_tables\",\r\n        \"catalog\": \"sample\",\r\n        \"schema\": \"burstbank\",\r\n        \"parameters\": {}\r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
