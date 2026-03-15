@@ -1291,6 +1291,28 @@
 						"url": "{{adk2-baseUrl}}/execute/tool"
 					},
 					"response": []
+				},
+				{
+					"name": "Describe Table",
+					"id": "c01cf5d9-5daf-4c11-a729-a5bc0265cd69",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"tool_name\": \"sb_describe_table\",\r\n  \"parameters\": {\r\n    \"table_name\": \"customer\",\r\n    \"catalog\": \"sample\",\r\n    \"schema\": \"burstbank\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{adk2-baseUrl}}/execute/tool"
+					},
+					"response": []
 				}
 			],
 			"id": "2065a0fe-f924-4bc5-b3f2-4fb2ca9c1bb1"
